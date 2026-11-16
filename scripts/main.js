@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initScrollProgressBar();
-    initScrollObserver();
+    initBidirectionalScrollReveals();
     init3DCardTilt();
     initMagneticButtons();
     initSmoothAnchors();
@@ -102,29 +102,155 @@ function initScrollProgressBar() {
 }
 
 /**
- * Observes sections and cards entering viewport with smooth progressive reveal.
+ * Advanced Bidirectional Scroll-Reveal Animation Engine using GSAP & ScrollTrigger.
+ * When scrolling down: elements smoothly emerge into view (opacity, Y translation, scale, blur removal).
+ * When scrolling up: elements smoothly reverse and return to their hidden state.
+ * Never plays only once; works continuously in both directions.
  */
-let globalScrollObserver = null;
-function initScrollObserver() {
-    if (typeof IntersectionObserver === 'undefined') {
-        document.querySelectorAll('.reveal-section, .reveal-card').forEach((el) => el.classList.add('is-revealed'));
+function initBidirectionalScrollReveals() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+        console.warn('GSAP or ScrollTrigger not loaded; falling back to direct display.');
         return;
     }
 
-    globalScrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-revealed');
-            }
+    gsap.registerPlugin(ScrollTrigger);
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+        gsap.set('.reveal-item, .reveal-group > *', {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            filter: 'none'
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
+        return;
+    }
+
+    const isMobile = window.innerWidth < 768;
+    const yOffset = isMobile ? 28 : 50;
+    const blurAmount = isMobile ? 3 : 6;
+    const scaleFactor = 0.97;
+    const animDuration = isMobile ? 0.6 : 0.75;
+
+    // Standalone Reveal Items (Section headers, hero lower block, banner, standalone cards)
+    const items = gsap.utils.toArray('.reveal-item');
+    items.forEach((item) => {
+        const existingTriggers = ScrollTrigger.getAll().filter((st) => st.trigger === item);
+        existingTriggers.forEach((st) => st.kill());
+
+        gsap.fromTo(
+            item,
+            {
+                opacity: 0,
+                y: yOffset,
+                scale: scaleFactor,
+                filter: `blur(${blurAmount}px)`
+            },
+            {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                filter: 'blur(0px)',
+                duration: animDuration,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 90%',
+                    end: 'bottom top',
+                    toggleActions: 'play reverse play reverse',
+                    fastScrollEnd: true
+                }
+            }
+        );
     });
 
-    document.querySelectorAll('.reveal-section, .reveal-card').forEach((el) => {
-        globalScrollObserver.observe(el);
+    // Staggered Groups (Grids of cards, role chronology, award matrices)
+    const groups = gsap.utils.toArray('.reveal-group');
+    groups.forEach((group) => {
+        const children = Array.from(group.children);
+        if (!children.length) return;
+
+        const existingTriggers = ScrollTrigger.getAll().filter((st) => st.trigger === group);
+        existingTriggers.forEach((st) => st.kill());
+
+        gsap.fromTo(
+            children,
+            {
+                opacity: 0,
+                y: yOffset,
+                scale: scaleFactor,
+                filter: `blur(${blurAmount}px)`
+            },
+            {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                filter: 'blur(0px)',
+                duration: animDuration,
+                stagger: isMobile ? 0.08 : 0.12,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: group,
+                    start: 'top 88%',
+                    end: 'bottom top',
+                    toggleActions: 'play reverse play reverse',
+                    fastScrollEnd: true
+                }
+            }
+        );
     });
+
+    ScrollTrigger.refresh();
+}
+
+/**
+ * Re-initializes bidirectional scroll reveals for dynamically loaded GitHub project cards.
+ */
+function initProjectsBidirectionalScroll() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    const group = document.getElementById('github-projects');
+    if (!group) return;
+
+    const children = Array.from(group.children);
+    if (!children.length) return;
+
+    const isMobile = window.innerWidth < 768;
+    const yOffset = isMobile ? 28 : 50;
+    const blurAmount = isMobile ? 3 : 6;
+    const scaleFactor = 0.97;
+    const animDuration = isMobile ? 0.6 : 0.75;
+
+    const existingTriggers = ScrollTrigger.getAll().filter((st) => st.trigger === group);
+    existingTriggers.forEach((st) => st.kill());
+
+    gsap.fromTo(
+        children,
+        {
+            opacity: 0,
+            y: yOffset,
+            scale: scaleFactor,
+            filter: `blur(${blurAmount}px)`
+        },
+        {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            filter: 'blur(0px)',
+            duration: animDuration,
+            stagger: isMobile ? 0.08 : 0.12,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: group,
+                start: 'top 88%',
+                end: 'bottom top',
+                toggleActions: 'play reverse play reverse',
+                fastScrollEnd: true
+            }
+        }
+    );
+
+    ScrollTrigger.refresh();
 }
 
 /**
@@ -155,7 +281,7 @@ function init3DCardTilt() {
 
         const onMouseLeave = () => {
             rect = null;
-            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+            card.style.transform = '';
         };
 
         card.addEventListener('mouseenter', onMouseEnter);
@@ -301,8 +427,7 @@ function initContactForm() {
  */
 function createProjectCard({ indexNumber, title, description, techTags, demoUrl, sourceUrl, imageUrl }) {
     const card = document.createElement('article');
-    const staggerIndex = ((indexNumber - 1) % 5) + 1;
-    card.className = `tilt-card reveal-card is-revealed bg-surface-container-low border border-[#242424] flex flex-col group hover:border-primary-container transition-all duration-300 stagger-${staggerIndex}`;
+    card.className = 'tilt-card reveal-card bg-surface-container-low border border-[#242424] flex flex-col group hover:border-primary-container transition-all duration-300';
 
     // Visual frame matching Stitch project preview
     const mediaFrame = document.createElement('div');
@@ -456,9 +581,7 @@ async function loadGitHubProjects() {
 
         init3DCardTilt();
         initMagneticButtons();
-        if (globalScrollObserver) {
-            container.querySelectorAll('.reveal-card').forEach((c) => globalScrollObserver.observe(c));
-        }
+        initProjectsBidirectionalScroll();
     } catch (error) {
         console.error('Error fetching GitHub repos:', error);
         container.innerHTML = '';
@@ -470,6 +593,7 @@ async function loadGitHubProjects() {
 
         init3DCardTilt();
         initMagneticButtons();
+        initProjectsBidirectionalScroll();
 
         const errMsg = document.createElement('p');
         errMsg.className = 'col-span-full text-center font-mono-code text-mono-code text-error';

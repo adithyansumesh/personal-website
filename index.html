@@ -219,7 +219,7 @@
     <main class="w-full pt-16 md:pt-20 min-h-screen relative z-10">
         <div class="relative w-full min-h-screen text-on-surface flex flex-col font-body-md selection:bg-primary-container selection:text-on-primary">
             <!-- HERO SECTION -->
-            <section class="relative w-full border-b border-[#242424] overflow-hidden reveal-section is-revealed" id="home">
+            <section class="relative w-full border-b border-[#242424] overflow-hidden" id="home">
                 <div class="relative w-full flex flex-col justify-between min-h-0 md:min-h-[820px] px-margin-mobile md:px-margin pt-space-lg md:pt-space-xl pb-space-lg" id="hero-content">
                     <!-- Corner Brackets -->
                     <div class="absolute top-4 left-4 font-mono-code text-xs text-[#3b4a3e] select-none">+</div>
@@ -303,7 +303,7 @@
                     </div>
 
                     <!-- Hero Bottom Content & Actions -->
-                    <div class="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end pt-space-md border-t border-[#242424]">
+                    <div class="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end pt-space-md border-t border-[#242424] reveal-item" id="hero-lower-content">
                         <div class="lg:col-span-7 flex flex-col gap-space-xs">
                             <p class="font-headline-sm text-headline-sm text-on-surface font-semibold">
                                 B.Tech Computer Science &amp; Engineering &mdash; Artificial Intelligence
@@ -341,8 +341,8 @@
             </section>
 
             <!-- SECTION: ABOUT ME ("> about") -->
-            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424] reveal-section" id="about">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424]">
+            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424]" id="about">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424] reveal-item">
                     <div>
                         <div class="flex items-center gap-space-xs font-mono-code text-mono-code text-primary-container mb-1">
                             <span>&gt; about</span>
@@ -356,9 +356,9 @@
                         // ABOUT ME
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal-group">
                     <!-- Card 1 -->
-                    <div class="reveal-card tilt-card stagger-1 relative p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
+                    <div class="tilt-card relative p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
                         <span class="absolute top-1 left-1.5 font-mono-code text-[11px] text-[#3b4a3e] select-none">+</span>
                         <span class="absolute top-1 right-1.5 font-mono-code text-[11px] text-[#3b4a3e] select-none">+</span>
                         <span class="absolute bottom-1 left-1.5 font-mono-code text-[11px] text-[#3b4a3e] select-none">+</span>
@@ -378,7 +378,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="reveal-card tilt-card stagger-2 relative p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
+                    <div class="tilt-card relative p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
                         <span class="absolute top-1 left-1.5 font-mono-code text-[11px] text-[#3b4a3e] select-none">+</span>
                         <span class="absolute top-1 right-1.5 font-mono-code text-[11px] text-[#3b4a3e] select-none">+</span>
                         <span class="absolute bottom-1 left-1.5 font-mono-code text-[11px] text-[#3b4a3e] select-none">+</span>
@@ -398,7 +398,7 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="reveal-card tilt-card stagger-3 relative p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
+                    <div class="tilt-card relative p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
                         <span class="absolute top-1 left-1.5 font-mono-code text-[11px] text-[#3b4a3e] select-none">+</span>
                         <span class="absolute top-1 right-1.5 font-mono-code text-[11px] text-[#3b4a3e] select-none">+</span>
                         <span class="absolute bottom-1 left-1.5 font-mono-code text-[11px] text-[#3b4a3e] select-none">+</span>
@@ -421,8 +421,8 @@
             </section>
 
             <!-- SECTION: TECHNICAL SKILLS ("> skills") -->
-            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424] reveal-section" id="skills">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424]">
+            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424]" id="skills">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424] reveal-item">
                     <div>
                         <div class="flex items-center gap-space-xs font-mono-code text-mono-code text-primary-container mb-1">
                             <span>&gt; skills</span>
@@ -436,9 +436,9 @@
                         // TECHNICAL SKILLS
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter reveal-group">
                     <!-- BENTO 1: AI / ML -->
-                    <div class="reveal-card tilt-card stagger-1 md:col-span-8 p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between relative overflow-hidden group hover:border-primary-container">
+                    <div class="tilt-card md:col-span-8 p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between relative overflow-hidden group hover:border-primary-container">
                         <div class="hidden sm:block absolute top-2 right-3 font-label-mono text-label-mono text-primary-container">PRIMARY_FOCUS</div>
                         <div>
                             <div class="flex items-center gap-space-sm mb-space-sm">
@@ -477,7 +477,7 @@
                         </div>
                     </div>
                     <!-- BENTO 2: PROGRAMMING -->
-                    <div class="reveal-card tilt-card stagger-2 md:col-span-4 p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
+                    <div class="tilt-card md:col-span-4 p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
                         <div>
                             <div class="flex items-center justify-between mb-space-sm">
                                 <div class="flex items-center gap-space-sm">
@@ -513,7 +513,7 @@
                         </div>
                     </div>
                     <!-- BENTO 3: LIBRARIES & WEB -->
-                    <div class="reveal-card tilt-card stagger-3 md:col-span-6 p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
+                    <div class="tilt-card md:col-span-6 p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
                         <div>
                             <div class="flex items-center gap-space-sm mb-space-sm">
                                 <span class="material-symbols-outlined text-primary-container text-[20px]">data_array</span>
@@ -535,7 +535,7 @@
                         </div>
                     </div>
                     <!-- BENTO 4: TOOLS -->
-                    <div class="reveal-card tilt-card stagger-4 md:col-span-6 p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
+                    <div class="tilt-card md:col-span-6 p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container">
                         <div>
                             <div class="flex items-center gap-space-sm mb-space-sm">
                                 <span class="material-symbols-outlined text-primary-container text-[20px]">cloud_sync</span>
@@ -559,8 +559,8 @@
             </section>
 
             <!-- SECTION: FEATURED PROJECTS ("> projects") -->
-            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424] reveal-section" id="projects">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424]">
+            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424]" id="projects">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424] reveal-item">
                     <div>
                         <div class="flex items-center gap-space-xs font-mono-code text-mono-code text-primary-container mb-1">
                             <span>&gt; projects</span>
@@ -575,7 +575,7 @@
                     </div>
                 </div>
                 <!-- Dynamic GitHub Projects 2x2 Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter" id="github-projects">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter reveal-group" id="github-projects">
                     <div class="col-span-full py-space-xl text-center font-mono-code text-mono-code text-on-surface-variant border border-[#242424] bg-surface-container-lowest">
                         &gt; loading projects from GitHub...
                     </div>
@@ -583,8 +583,8 @@
             </section>
 
             <!-- SECTION: EXPERIENCE ("> experience") -->
-            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424] reveal-section" id="experience">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424]">
+            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424]" id="experience">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424] reveal-item">
                     <div>
                         <div class="flex items-center gap-space-xs font-mono-code text-mono-code text-primary-container mb-1">
                             <span>&gt; experience</span>
@@ -598,9 +598,9 @@
                         // EXPERIENCE
                     </div>
                 </div>
-                <div class="flex flex-col divide-y divide-[#242424] border-t border-b border-[#242424]">
+                <div class="flex flex-col divide-y divide-[#242424] border-t border-b border-[#242424] reveal-group">
                     <!-- Role 01 -->
-                    <div class="py-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg group hover:bg-surface-container-lowest transition-colors px-2 reveal-card stagger-1">
+                    <div class="py-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg group hover:bg-surface-container-lowest transition-colors px-2">
                         <div class="lg:col-span-5 flex flex-col justify-between">
                             <div>
                                 <div class="font-label-mono text-label-mono text-primary-container uppercase tracking-wider mb-1">
@@ -635,7 +635,7 @@
                         </div>
                     </div>
                     <!-- Role 02 -->
-                    <div class="py-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg group hover:bg-surface-container-lowest transition-colors px-2 reveal-card stagger-2">
+                    <div class="py-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg group hover:bg-surface-container-lowest transition-colors px-2">
                         <div class="lg:col-span-5 flex flex-col justify-between">
                             <div>
                                 <div class="font-label-mono text-label-mono text-primary-container uppercase tracking-wider mb-1">
@@ -669,8 +669,8 @@
             </section>
 
             <!-- SECTION: EDUCATION ("> education") -->
-            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424] reveal-section" id="education">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424]">
+            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424]" id="education">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424] reveal-item">
                     <div>
                         <div class="flex items-center gap-space-xs font-mono-code text-mono-code text-primary-container mb-1">
                             <span>&gt; education</span>
@@ -684,7 +684,7 @@
                         // EDUCATION
                     </div>
                 </div>
-                <div class="p-space-lg md:p-space-xl bg-surface-container-lowest border border-[#242424] grid grid-cols-1 lg:grid-cols-12 gap-space-lg relative group hover:border-primary-container transition-colors reveal-card tilt-card stagger-1">
+                <div class="p-space-lg md:p-space-xl bg-surface-container-lowest border border-[#242424] grid grid-cols-1 lg:grid-cols-12 gap-space-lg relative group hover:border-primary-container transition-colors reveal-item tilt-card">
                     <span class="absolute top-1 left-2 font-mono-code text-xs text-[#3b4a3e] select-none">+</span>
                     <span class="absolute top-1 right-2 font-mono-code text-xs text-[#3b4a3e] select-none">+</span>
                     <span class="absolute bottom-1 left-2 font-mono-code text-xs text-[#3b4a3e] select-none">+</span>
@@ -728,8 +728,8 @@
             </section>
 
             <!-- SECTION: ACHIEVEMENTS & CERTIFICATIONS ("> certifications") -->
-            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424] reveal-section" id="achievements">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424]">
+            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424]" id="achievements">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424] reveal-item">
                     <div>
                         <div class="flex items-center gap-space-xs font-mono-code text-mono-code text-primary-container mb-1">
                             <span>&gt; certifications</span>
@@ -743,9 +743,9 @@
                         // ACHIEVEMENTS &amp; CERTIFICATIONS
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter reveal-group">
                     <!-- Award 01 -->
-                    <div class="p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container transition-colors reveal-card tilt-card stagger-1">
+                    <div class="p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container transition-colors tilt-card">
                         <div>
                             <div class="flex items-center justify-between mb-space-md border-b border-[#242424] pb-space-xs">
                                 <span class="font-label-mono text-label-mono text-primary-container">[01]</span>
@@ -763,7 +763,7 @@
                         </div>
                     </div>
                     <!-- Award 02 -->
-                    <div class="p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container transition-colors reveal-card tilt-card stagger-2">
+                    <div class="p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container transition-colors tilt-card">
                         <div>
                             <div class="flex items-center justify-between mb-space-md border-b border-[#242424] pb-space-xs">
                                 <span class="font-label-mono text-label-mono text-primary-container">[02]</span>
@@ -781,7 +781,7 @@
                         </div>
                     </div>
                     <!-- Award 03 -->
-                    <div class="p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container transition-colors reveal-card tilt-card stagger-3">
+                    <div class="p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container transition-colors tilt-card">
                         <div>
                             <div class="flex items-center justify-between mb-space-md border-b border-[#242424] pb-space-xs">
                                 <span class="font-label-mono text-label-mono text-primary-container">[03]</span>
@@ -799,7 +799,7 @@
                         </div>
                     </div>
                     <!-- Award 04 -->
-                    <div class="p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container transition-colors reveal-card tilt-card stagger-4">
+                    <div class="p-space-lg bg-surface-container-lowest border border-[#242424] flex flex-col justify-between group hover:border-primary-container transition-colors tilt-card">
                         <div>
                             <div class="flex items-center justify-between mb-space-md border-b border-[#242424] pb-space-xs">
                                 <span class="font-label-mono text-label-mono text-primary-container">[04]</span>
@@ -820,8 +820,8 @@
             </section>
 
             <!-- RESUME CTA BANNER -->
-            <section class="w-full px-margin-mobile md:px-margin py-space-xl border-b border-[#242424] bg-surface-container-lowest reveal-section" id="resume-cta">
-                <div class="p-space-lg md:p-space-xl border border-[#242424] flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg">
+            <section class="w-full px-margin-mobile md:px-margin py-space-xl border-b border-[#242424] bg-surface-container-lowest" id="resume-cta">
+                <div class="p-space-lg md:p-space-xl border border-[#242424] flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg reveal-item">
                     <div class="flex flex-col gap-1">
                         <div class="flex items-center gap-2 font-label-mono text-label-mono text-primary-container">
                             <span class="w-2 h-2 bg-primary-container"></span>
@@ -842,8 +842,8 @@
             </section>
 
             <!-- SECTION: CONTACT ("> contact") -->
-            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424] reveal-section" id="contact">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424]">
+            <section class="w-full px-margin-mobile md:px-margin py-space-xl md:py-space-2xl border-b border-[#242424]" id="contact">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-[#242424] reveal-item">
                     <div>
                         <div class="flex items-center gap-space-xs font-mono-code text-mono-code text-primary-container mb-1">
                             <span>&gt; contact</span>
@@ -857,9 +857,9 @@
                         // SOCKET_PORT: OPEN
                     </div>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl reveal-group">
                     <!-- Left: Direct Communication Channels -->
-                    <div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-lowest p-space-lg border border-[#242424] reveal-card tilt-card stagger-1">
+                    <div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-lowest p-space-lg border border-[#242424] tilt-card">
                         <div>
                             <p class="font-body-lg text-body-lg text-on-surface leading-relaxed mb-space-lg">
                                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
@@ -898,7 +898,7 @@
                         </div>
                     </div>
                     <!-- Right: Terminal Web3Forms Contact Form -->
-                    <div class="lg:col-span-7 bg-surface-container-lowest p-space-lg md:p-space-xl border border-[#242424] relative reveal-card tilt-card stagger-2">
+                    <div class="lg:col-span-7 bg-surface-container-lowest p-space-lg md:p-space-xl border border-[#242424] relative tilt-card">
                         <div class="flex items-center justify-between border-b border-[#242424] pb-space-xs mb-space-lg font-mono-code text-mono-code text-on-surface-variant">
                             <span>// BUFFER_INPUT_STREAM</span>
                             <span class="text-primary-container">STDIN: READY</span>
@@ -938,7 +938,7 @@
             <!-- STARK HIGH-CONTRAST INVERTED FOOTER -->
             <footer class="w-full bg-[#F2F2F2] text-[#050505] overflow-hidden select-none">
                 <div class="w-full px-margin-mobile md:px-margin pt-space-2xl pb-24 md:pb-28 flex flex-col justify-between min-h-[460px]">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-space-md border-b border-[#050505]/20 pb-space-lg">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-space-md border-b border-[#050505]/20 pb-space-lg reveal-item">
                         <div class="flex flex-col gap-0.5">
                             <span class="font-label-mono text-label-mono uppercase tracking-widest text-[#050505]/80">
                                 // PROTOCOL ENDPOINT: TERMINAL_EOF
@@ -954,12 +954,12 @@
                             </div>
                         </a>
                     </div>
-                    <div class="py-space-xl overflow-hidden leading-none">
+                    <div class="py-space-xl overflow-hidden leading-none reveal-item">
                         <div class="font-headline-lg text-[16vw] font-bold tracking-tighter uppercase whitespace-nowrap text-[#050505] select-none text-center">
                             ADITHYAN
                         </div>
                     </div>
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-space-md border-t border-[#050505]/20 pt-space-lg font-mono-code text-mono-code text-[#050505]">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-space-md border-t border-[#050505]/20 pt-space-lg font-mono-code text-mono-code text-[#050505] reveal-item">
                         <div>
                             &copy; 2026 Adithyan Sumesh. Designed &amp; Built with &hearts;
                         </div>
@@ -979,6 +979,8 @@
         <span id="toast-message"></span>
     </div>
 
+    <script src="scripts/vendor/gsap.min.js"></script>
+    <script src="scripts/vendor/ScrollTrigger.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>
