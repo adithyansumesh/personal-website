@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-secondary-fixed-variant': '#5516be', 'on-secondary-fixed': '#23005c', 'surface-container-high': '#292931', 'inverse-on-surface': '#2f3038', 'outline-variant': '#424754', 'on-tertiary-fixed': '#001f26', 'primary-container': '#4d8eff', 'secondary': '#d0bcff', 'on-tertiary-fixed-variant': '#004e5c', 'secondary-container': '#571bc1', 'on-error-container': '#ffdad6', 'outline': '#8c909f', 'surface-variant': '#34343c', 'on-tertiary-container': '#002f38', 'error': '#ffb4ab', 'on-primary': '#002e6a', 'surface': '#12131a', 'inverse-primary': '#005ac2', 'on-secondary-container': '#c4abff', 'error-container': '#93000a', 'on-primary-fixed-variant': '#004395', 'on-surface-variant': '#c2c6d6', 'secondary-fixed': '#e9ddff', 'background': '#12131a', 'surface-container': '#1e1f27', 'tertiary-fixed-dim': '#4cd7f6', 'on-secondary': '#3c0091', 'surface-tint': '#adc6ff', 'on-primary-container': '#00285d', 'on-primary-fixed': '#001a42', 'surface-container-lowest': '#0d0e15', 'primary': '#adc6ff', 'tertiary': '#4cd7f6', 'on-error': '#690005', 'inverse-surface': '#e3e1ec', 'tertiary-container': '#009eb9', 'surface-container-low': '#1a1b22', 'surface-bright': '#383941', 'primary-fixed-dim': '#adc6ff', 'secondary-fixed-dim': '#d0bcff', 'surface-dim': '#12131a', 'tertiary-fixed': '#acedff', 'on-tertiary': '#003640', 'primary-fixed': '#d8e2ff', 'on-surface': '#e3e1ec', 'on-background': '#e3e1ec', 'surface-container-highest': '#34343c' }, borderRadius: { DEFAULT: '0.25rem', lg: '0.5rem', xl: '0.75rem', full: '9999px' }, spacing: { 'gutter-mobile': '1rem', 'space-lg': '1.5rem', margin: '2rem', 'space-md': '1rem', gutter: '1.5rem', 'space-2xl': '4rem', 'space-xs': '0.25rem', 'space-sm': '0.5rem', 'space-xl': '2.5rem', 'margin-mobile': '1.25rem' }, fontFamily: { 'code-md': ['JetBrains Mono'], display: ['Space Grotesk'], 'body-sm': ['Inter'], 'body-md': ['Inter'], 'body-lg': ['Inter'], 'label-caps': ['JetBrains Mono'], 'headline-md': ['Space Grotesk'], 'headline-sm': ['Space Grotesk'], 'headline-lg': ['Space Grotesk'], 'display-mobile': ['Space Grotesk'], 'headline-lg-mobile': ['Space Grotesk'], 'code-sm': ['JetBrains Mono'] }, fontSize: { 'code-md': ['14px', { lineHeight: '22px', letterSpacing: '-0.01em', fontWeight: '500' }], display: ['56px', { lineHeight: '64px', letterSpacing: '-0.03em', fontWeight: '700' }], 'body-sm': ['13px', { lineHeight: '20px', letterSpacing: '0', fontWeight: '400' }], 'body-md': ['15px', { lineHeight: '24px', letterSpacing: '0', fontWeight: '400' }], 'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '400' }], 'label-caps': ['11px', { lineHeight: '16px', letterSpacing: '0.08em', fontWeight: '600' }], 'headline-md': ['28px', { lineHeight: '36px', letterSpacing: '-0.01em', fontWeight: '600' }], 'headline-sm': ['20px', { lineHeight: '28px', letterSpacing: '0', fontWeight: '500' }], 'headline-lg': ['40px', { lineHeight: '48px', letterSpacing: '-0.02em', fontWeight: '600' }], 'display-mobile': ['36px', { lineHeight: '44px', letterSpacing: '-0.02em', fontWeight: '700' }], 'headline-lg-mobile': ['28px', { lineHeight: '36px', letterSpacing: '-0.01em', fontWeight: '600' }], 'code-sm': ['12px', { lineHeight: '18px', letterSpacing: '0.02em', fontWeight: '400' }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#12131a;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Adithyan</span><span class="font-label-caps text-label-caps text-tertiary uppercase leading-none mt-1">Overview</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Toggle Menu" class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" id="menu-toggle"><span class="material-symbols-outlined text-[20px]">menu_open</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD02e0ZbwQntIjvj_w_XF5sjUsMPD4L6aEKXDsW7T5utwYeHNQqCZ3PvQ1ZWe-8IQsuO3VFJ65TaRpyiXBpPPO8X9sMB9fDW5E2scSrL2O_Wc19kk7DYrkMnc-2aETjql1PmbbaiBwSIhM2amx4Bx_DoEPTNSCoJAm8EH6toCztN2JZqcaKPWNyY_CxL-0KXpF0dS5Aart1zQYATdQiTSSNjzpkE9099PzJ8GtlL-c"/></div></div><div class="w-full h-[2px] bg-surface-container-highest overflow-hidden"><div class="h-full w-0 bg-gradient-to-r from-primary via-tertiary to-secondary transition-all duration-75" id="scroll-bar"></div></div></header><div class="fixed inset-0 z-40 bg-surface/95 backdrop-blur-2xl opacity-0 pointer-events-none transition-all duration-300 flex flex-col justify-between pt-24 pb-28 px-margin-mobile" id="menu-sheet"><div class="flex flex-col gap-space-lg"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">System Navigation</span><span class="font-code-sm text-code-sm text-tertiary">v2.6_PROD</span></div><nav class="flex flex-col gap-space-md" data-active-classes="text-primary font-headline-md"><a aria-current="page" class="transition-colors flex items-center justify-between text-primary font-headline-md" data-path="overview" href="#"><span>01 // Overview</span><span class="material-symbols-outlined text-tertiary">north_east</span></a><a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-between" data-path="projects" href="#"><span>02 // Neural Systems</span><span class="material-symbols-outlined text-tertiary">north_east</span></a><a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-between" data-path="research" href="#"><span>03 // Research Lab</span><span class="material-symbols-outlined text-tertiary">north_east</span></a><a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-between" data-path="benchmarks" href="#"><span>04 // Benchmarks</span><span class="material-symbols-outlined text-tertiary">north_east</span></a><a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-between" data-path="contact" href="#"><span>05 // Transmission</span><span class="material-symbols-outlined text-tertiary">north_east</span></a></nav></div><div class="flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-code-sm text-code-sm text-on-surface">Kernel: Operational</span></div><span class="font-code-sm text-code-sm text-outline">Latency &lt;14ms</span></div><p class="font-code-sm text-code-sm text-outline text-center">© 2026 Adithyan Sumesh. Designed &amp; Built with ♥</p></div></div><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-[calc(100vh-64px)]"><div class="flex flex-col w-full text-on-surface">
+<!-- TOP GLOW AMBIENT ACCENT -->
+<div class="relative w-full overflow-hidden pointer-events-none">
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 w-80 h-80 bg-primary/10 rounded-full blur-[90px]"></div>
+<div class="absolute top-20 right-0 w-64 h-64 bg-secondary-container/20 rounded-full blur-[80px]"></div>
+</div>
+<!-- HERO SECTION -->
+<section class="relative px-margin-mobile pt-space-md pb-space-xl flex flex-col items-center text-center">
+<!-- Live Availability Pip -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high/80 backdrop-blur-md mb-space-lg shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium tracking-wide">SYSTEM: ONLINE // READY FOR HIRE</span>
+</div>
+<!-- Profile Avatar Frame with Radiant Rim Glow -->
+<div class="relative mb-space-lg">
+<div class="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-primary via-tertiary to-secondary opacity-75 blur-md animate-pulse"></div>
+<div class="relative rounded-full p-1 bg-surface-container-lowest">
+<img alt="Adithyan Sumesh" class="w-32 h-32 object-cover rounded-full mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD02e0ZbwQntIjvj_w_XF5sjUsMPD4L6aEKXDsW7T5utwYeHNQqCZ3PvQ1ZWe-8IQsuO3VFJ65TaRpyiXBpPPO8X9sMB9fDW5E2scSrL2O_Wc19kk7DYrkMnc-2aETjql1PmbbaiBwSIhM2amx4Bx_DoEPTNSCoJAm8EH6toCztN2JZqcaKPWNyY_CxL-0KXpF0dS5Aart1zQYATdQiTSSNjzpkE9099PzJ8GtlL-c"/>
+</div>
+<div class="absolute bottom-1 right-1 w-6 h-6 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="w-3.5 h-3.5 rounded-full bg-tertiary"></span>
+</div>
+</div>
+<!-- Hero Titles & Subtitle -->
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase mb-1">Hello, I'm</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight mb-2">Adithyan Sumesh</h1>
+<div class="px-space-sm py-1 rounded-lg bg-surface-container-low mb-space-md">
+<span class="font-code-sm text-code-sm text-primary font-medium">B.Tech Computer Science &amp; Engineering — Artificial Intelligence</span>
+</div>
+<!-- Verbatim Bio Paragraph -->
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-lg leading-relaxed">
+      Building intelligent systems that solve real-world problems. Passionate about AI application development and pushing the boundaries of machine learning.
+    </p>
+<!-- CTAs Stacked -->
+<div class="w-full flex flex-col gap-3 max-w-xs mb-space-lg">
+<a class="w-full h-12 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary-container via-inverse-primary to-secondary-container text-white font-headline-sm text-headline-sm font-semibold shadow-lg shadow-primary-container/25 transition-transform active:scale-95" href="#projects">
+<span>View My Projects</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="w-full h-12 flex items-center justify-center gap-2 rounded-full bg-surface-container-high/90 text-on-surface font-headline-sm text-headline-sm font-medium backdrop-blur-md transition-colors active:bg-surface-container-highest" href="#resume">
+<span class="material-symbols-outlined text-[18px] text-tertiary">download</span>
+<span>Download Resume</span>
+</a>
+</div>
+<!-- Social Icon Links -->
+<div class="flex items-center gap-4">
+<a aria-label="LinkedIn" class="w-11 h-11 rounded-xl bg-surface-container-high/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-95 shadow-sm" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+</a>
+<a aria-label="GitHub" class="w-11 h-11 rounded-xl bg-surface-container-high/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-95 shadow-sm" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"></path></svg>
+</a>
+<a aria-label="Email" class="w-11 h-11 rounded-xl bg-surface-container-high/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-95 shadow-sm" href="mailto:adithyansreevinu@gmail.com">
+<span class="material-symbols-outlined text-[22px]">mail</span>
+</a>
+</div>
+</section>
+<!-- SECTION 2: ABOUT ME -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">// 01</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">About Me</h2>
+</div>
+<!-- Card 1 -->
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex-shrink-0 flex items-center justify-center mt-0.5">
+<span class="material-symbols-outlined text-primary text-[20px]">school</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        I am an Artificial Intelligence undergraduate at Providence College of Engineering with hands-on experience in building and deploying AI-driven applications.
+      </p>
+</div>
+<!-- Card 2 -->
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex-shrink-0 flex items-center justify-center mt-0.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">neurology</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        I specialize in developing apps leveraging Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG). My experience includes deploying applications using modern platforms like Claude AI, ChatGPT, Antigravity, Render, and Vercel.
+      </p>
+</div>
+<!-- Card 3 -->
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex-shrink-0 flex items-center justify-center mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        I am strong in Python-based model development, data processing, and real-world problem-solving, with a focus on reducing manual effort and improving decision-making workflows.
+      </p>
+</div>
+</section>
+<!-- SECTION 3: TECHNICAL SKILLS -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">// 02</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Technical Skills</h2>
+</div>
+<span class="font-label-caps text-label-caps text-outline uppercase">Stack Specs</span>
+</div>
+<!-- Skill Card 1: Programming -->
+<div class="p-space-md rounded-xl bg-surface-container/75 backdrop-blur-xl shadow-md">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-[22px]">code</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium">Programming</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-primary font-code-sm text-code-sm font-medium">Python</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-primary font-code-sm text-code-sm font-medium">Java</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-primary font-code-sm text-code-sm font-medium">C</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-primary font-code-sm text-code-sm font-medium">SQL</span>
+</div>
+</div>
+<!-- Skill Card 2: AI / ML -->
+<div class="p-space-md rounded-xl bg-surface-container/75 backdrop-blur-xl shadow-md">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-tertiary text-[22px]">psychology</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium">AI / ML</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-tertiary font-code-sm text-code-sm font-medium">Machine Learning</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-tertiary font-code-sm text-code-sm font-medium">NLP &amp; LLMs</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-tertiary font-code-sm text-code-sm font-medium">RAG</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-tertiary font-code-sm text-code-sm font-medium">Prompt Engineering</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-tertiary font-code-sm text-code-sm font-medium">Anomaly Detection</span>
+</div>
+</div>
+<!-- Skill Card 3: Libraries & Web -->
+<div class="p-space-md rounded-xl bg-surface-container/75 backdrop-blur-xl shadow-md">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">data_object</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium">Libraries &amp; Web</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary font-code-sm text-code-sm font-medium">Scikit-learn</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary font-code-sm text-code-sm font-medium">Pandas / NumPy</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary font-code-sm text-code-sm font-medium">HTML / CSS</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary font-code-sm text-code-sm font-medium">Data Preprocessing</span>
+</div>
+</div>
+<!-- Skill Card 4: Tools -->
+<div class="p-space-md rounded-xl bg-surface-container/75 backdrop-blur-xl shadow-md">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary-container text-[22px]">build</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium">Tools</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-code-sm text-code-sm font-medium">Git &amp; GitHub</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-code-sm text-code-sm font-medium">Vercel &amp; Render</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-code-sm text-code-sm font-medium">Canva</span>
+</div>
+</div>
+</section>
+<!-- SECTION 4: FEATURED PROJECTS -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md" id="projects">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">// 03</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Featured Projects</h2>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary">04 Deployed</span>
+</div>
+<!-- Project 1: MovieMind AI -->
+<div class="p-space-md rounded-xl bg-surface-container/80 backdrop-blur-xl shadow-md flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">MovieMind AI</h3>
+<span class="font-code-sm text-code-sm text-tertiary">[ML-Inference]</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">movie</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Personalized Movie Review System using Artificial Intelligence and Machine Learning techniques.
+      </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-tertiary font-code-sm text-code-sm">Python</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-tertiary font-code-sm text-code-sm">Machine Learning</span>
+</div>
+<div class="flex items-center gap-2 mt-1 pt-3">
+<button class="flex-1 h-10 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-1 active:opacity-90" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Live Demo</span>
+</button>
+<button class="flex-1 h-10 rounded-lg bg-surface-container-high text-on-surface font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-1 active:bg-surface-container-highest" type="button">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Source</span>
+</button>
+</div>
+</div>
+<!-- Project 2: Order Assistant -->
+<div class="p-space-md rounded-xl bg-surface-container/80 backdrop-blur-xl shadow-md flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Order Assistant</h3>
+<span class="font-code-sm text-code-sm text-primary">[RAG-Agent]</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">shopping_cart</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        View repository on GitHub to learn more.
+      </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-primary font-code-sm text-code-sm">TypeScript</span>
+</div>
+<div class="flex items-center gap-2 mt-1 pt-3">
+<button class="flex-1 h-10 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-1 active:opacity-90" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Live Demo</span>
+</button>
+<button class="flex-1 h-10 rounded-lg bg-surface-container-high text-on-surface font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-1 active:bg-surface-container-highest" type="button">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Source</span>
+</button>
+</div>
+</div>
+<!-- Project 3: Ai Humanizer -->
+<div class="p-space-md rounded-xl bg-surface-container/80 backdrop-blur-xl shadow-md flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Ai Humanizer</h3>
+<span class="font-code-sm text-code-sm text-secondary">[NLP-Pipeline]</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[18px]">record_voice_over</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        View repository on GitHub to learn more.
+      </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-secondary font-code-sm text-code-sm">JavaScript</span>
+</div>
+<div class="flex items-center gap-2 mt-1 pt-3">
+<button class="flex-1 h-10 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-1 active:opacity-90" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Live Demo</span>
+</button>
+<button class="flex-1 h-10 rounded-lg bg-surface-container-high text-on-surface font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-1 active:bg-surface-container-highest" type="button">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Source</span>
+</button>
+</div>
+</div>
+<!-- Project 4: MaatruCare -->
+<div class="p-space-md rounded-xl bg-surface-container/80 backdrop-blur-xl shadow-md flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">MaatruCare</h3>
+<span class="font-code-sm text-code-sm text-tertiary">[Health-AI]</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[18px]">favorite</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        View repository on GitHub to learn more.
+      </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-tertiary font-code-sm text-code-sm">JavaScript</span>
+</div>
+<div class="flex items-center gap-2 mt-1 pt-3">
+<button class="flex-1 h-10 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-1 active:opacity-90" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Live Demo</span>
+</button>
+<button class="flex-1 h-10 rounded-lg bg-surface-container-high text-on-surface font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-1 active:bg-surface-container-highest" type="button">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Source</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 5: EXPERIENCE -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">// 04</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Experience</h2>
+</div>
+<!-- Vertical Timeline Container -->
+<div class="relative pl-6 flex flex-col gap-space-lg">
+<!-- Glow Timeline Stem -->
+<div class="absolute left-2.5 top-3 bottom-3 w-0.5 bg-gradient-to-b from-primary via-tertiary to-secondary-container opacity-60"></div>
+<!-- Experience Item 1 -->
+<div class="relative flex flex-col gap-2">
+<!-- Node Pip -->
+<div class="absolute -left-6 top-1.5 w-3 h-3 rounded-full bg-primary shadow-sm shadow-primary ring-4 ring-surface"></div>
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md">
+<div class="flex flex-col mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Space Technology Intern</span>
+<span class="font-body-md text-body-md text-primary font-medium">India Space Lab</span>
+<span class="font-code-sm text-code-sm text-outline">Jun 2025 – Jul 2025</span>
+</div>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5 flex-shrink-0">chevron_right</span>
+<span>Studied CubeSat and CanSat system architecture and mission workflows.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5 flex-shrink-0">chevron_right</span>
+<span>Learned fundamentals of remote sensing and satellite data processing.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5 flex-shrink-0">chevron_right</span>
+<span>Gained exposure to real-world engineering systems and aerospace technologies.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Experience Item 2 -->
+<div class="relative flex flex-col gap-2">
+<!-- Node Pip -->
+<div class="absolute -left-6 top-1.5 w-3 h-3 rounded-full bg-tertiary shadow-sm shadow-tertiary ring-4 ring-surface"></div>
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md">
+<div class="flex flex-col mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Intern in AI &amp; Data Science</span>
+<span class="font-body-md text-body-md text-tertiary font-medium">SRAI Smart Solutions Pvt. Ltd (STEM Robotics)</span>
+<span class="font-code-sm text-code-sm text-outline">Jun 2025</span>
+</div>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5 flex-shrink-0">chevron_right</span>
+<span>Worked on practical AI and data science concepts, contributing to project-based learning.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5 flex-shrink-0">chevron_right</span>
+<span>Developed skills in data analysis, machine learning fundamentals, and applied AI techniques.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: EDUCATION -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">// 05</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Education</h2>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container/75 backdrop-blur-xl shadow-md flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">B.Tech — Computer Science &amp; Engineering (AI)</h3>
+<p class="font-body-md text-body-md text-primary font-medium">Providence College of Engineering</p>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-tertiary font-code-sm text-code-sm font-semibold flex-shrink-0">Expected Jun 2027</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1.5">
+<span class="font-label-caps text-label-caps text-tertiary uppercase">Curriculum</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Relevant Coursework: Machine Learning, Deep Learning, Data Structures, Algorithms.
+        </p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1.5">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Initiatives &amp; Community</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Engagement: Actively involved in AI-based projects and hackathons. Showcased interest in learning and applying emerging technologies.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 7: ACHIEVEMENTS & CERTIFICATIONS -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">// 06</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Achievements &amp; Certifications</h2>
+</div>
+<span class="font-label-caps text-label-caps text-outline uppercase">Honors</span>
+</div>
+<!-- Achievement 1 -->
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex-shrink-0 flex items-center justify-center mt-0.5">
+<span class="material-symbols-outlined text-primary text-[22px]">trophy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">GENESIS 2.0 National Level Hackathon</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Providence College of Engineering</span>
+<span class="font-code-sm text-code-sm text-outline mt-1">Jan–Feb 2026</span>
+</div>
+</div>
+<!-- Achievement 2 -->
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/20 flex-shrink-0 flex items-center justify-center mt-0.5">
+<span class="material-symbols-outlined text-tertiary text-[22px]">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Build Your Own Chatbot</span>
+<span class="font-body-md text-body-md text-on-surface-variant">IBM Cognitive Class</span>
+<span class="font-code-sm text-code-sm text-outline mt-1">Mar 2025</span>
+</div>
+</div>
+<!-- Achievement 3 -->
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/20 flex-shrink-0 flex items-center justify-center mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Artificial Intelligence Analyst</span>
+<span class="font-body-md text-body-md text-on-surface-variant">IBM Career Education Program</span>
+<span class="font-code-sm text-code-sm text-outline mt-1">Mar 2025</span>
+</div>
+</div>
+<!-- Achievement 4 -->
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex-shrink-0 flex items-center justify-center mt-0.5">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[22px]">draw</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">UI/UX Competition</span>
+<span class="font-body-md text-body-md text-on-surface-variant">IEEE PIEVERSE</span>
+<span class="font-code-sm text-code-sm text-outline mt-1">May 2024</span>
+</div>
+</div>
+</section>
+<!-- SECTION 8: RESUME CTA -->
+<section class="px-margin-mobile py-space-lg" id="resume">
+<div class="relative overflow-hidden p-space-lg rounded-2xl bg-surface-container-high/90 backdrop-blur-xl shadow-xl flex flex-col items-center text-center gap-space-sm">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/15 rounded-full blur-2xl"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-tertiary text-[26px]">description</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Want to know more about me?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs leading-relaxed">
+        Download my latest resume for a complete overview of my qualifications.
+      </p>
+<button class="w-full max-w-xs h-12 mt-2 rounded-full bg-gradient-to-r from-primary-container via-inverse-primary to-secondary-container text-white font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 shadow-lg shadow-primary-container/20 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Download Resume</span>
+</button>
+</div>
+</section>
+<!-- SECTION 9: CONTACT -->
+<section class="px-margin-mobile pt-space-lg pb-space-2xl flex flex-col gap-space-md" id="contact">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">// 07</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Let's Connect</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+    </p>
+<!-- Direct Contact Details -->
+<div class="flex flex-col gap-2">
+<!-- Email -->
+<a class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl flex items-center gap-space-sm shadow-sm active:bg-surface-container-high transition-colors" href="mailto:adithyansreevinu@gmail.com">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">mail</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-outline uppercase">Email Transmission</span>
+<span class="font-code-sm text-code-sm text-on-surface truncate">adithyansreevinu@gmail.com</span>
+</div>
+</a>
+<!-- Phone -->
+<a class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl flex items-center gap-space-sm shadow-sm active:bg-surface-container-high transition-colors" href="tel:+919495714600">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[20px]">call</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-outline uppercase">Direct Line</span>
+<span class="font-code-sm text-code-sm text-on-surface">(+91) 9495714600</span>
+</div>
+</a>
+<!-- Social Dual Strip -->
+<div class="grid grid-cols-2 gap-2">
+<a class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl flex items-center gap-space-sm shadow-sm active:bg-surface-container-high transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<svg class="w-4 h-4 fill-current text-primary" viewbox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium">LinkedIn</span>
+</a>
+<a class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-xl flex items-center gap-space-sm shadow-sm active:bg-surface-container-high transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<svg class="w-4 h-4 fill-current text-on-surface-variant" viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"></path></svg>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium">GitHub</span>
+</a>
+</div>
+</div>
+<!-- Mobile Interactive Contact Form -->
+<form class="mt-2 p-space-md rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-lg flex flex-col gap-3" id="contact-form">
+<div class="flex items-center justify-between pb-1">
+<span class="font-code-sm text-code-sm text-tertiary"># DISPATCH_CONSOLE</span>
+<span class="font-code-sm text-code-sm text-outline">ENC: AES-256</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="form-name">Name</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-highest text-on-surface placeholder:text-outline font-body-md text-body-md outline-none focus:bg-surface-bright" id="form-name" name="name" placeholder="Your full name" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="form-email">Email</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-highest text-on-surface placeholder:text-outline font-body-md text-body-md outline-none focus:bg-surface-bright" id="form-email" name="email" placeholder="your.email@domain.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="form-message">Message</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-highest text-on-surface placeholder:text-outline font-body-md text-body-md outline-none resize-none focus:bg-surface-bright" id="form-message" name="message" placeholder="Tell me about your project, idea, or initiative..." required="" rows="4"></textarea>
+</div>
+<button class="w-full h-12 mt-1 rounded-full bg-gradient-to-r from-primary-container via-inverse-primary to-secondary-container text-white font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 active:scale-98 transition-transform shadow-md shadow-primary-container/20" id="submit-btn" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Send Message</span>
+</button>
+<div class="hidden p-2 rounded-lg bg-surface-container-high text-center font-code-sm text-code-sm text-tertiary" id="form-feedback">
+        Transmission queued. Thank you for connecting!
+      </div>
+</form>
+</section>
+</div>
+<script>
+  // Simple form submission feedback micro-interaction
+  const contactForm = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const formFeedback = document.getElementById('form-feedback');
+
+  if (contactForm && submitBtn && formFeedback) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-75');
+      submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">sync</span><span>Transmitting...</span>';
+      
+      setTimeout(() => {
+        contactForm.reset();
+        submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span><span>Sent Successfully</span>';
+        formFeedback.classList.remove('hidden');
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('opacity-75');
+          submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">send</span><span>Send Message</span>';
+          formFeedback.classList.add('hidden');
+        }, 4000);
+      }, 1000);
+    });
+  }
+</script><footer class="w-full mt-auto py-space-xl px-margin-mobile text-center bg-surface-container-lowest/50"><p class="font-code-sm text-code-sm text-outline">© 2026 Adithyan Sumesh. Designed &amp; Built with ♥</p></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-code-md"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] px-space-xs transition-colors text-primary font-code-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-code-sm text-code-sm">Index</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="projects" href="#"><span class="material-symbols-outlined text-[20px]">memory</span><span class="font-code-sm text-code-sm">Models</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="research" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span class="font-code-sm text-code-sm">Papers</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="benchmarks" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-code-sm text-code-sm">Stats</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span><span class="font-code-sm text-code-sm">Connect</span></a></div></nav><script>const toggle = document.getElementById('menu-toggle'); const sheet = document.getElementById('menu-sheet'); if (toggle && sheet) { toggle.addEventListener('click', () => { const isOpen = sheet.classList.contains('opacity-100'); if (isOpen) { sheet.classList.remove('opacity-100', 'pointer-events-auto'); sheet.classList.add('opacity-0', 'pointer-events-none'); } else { sheet.classList.add('opacity-100', 'pointer-events-auto'); sheet.classList.remove('opacity-0', 'pointer-events-none'); } }); } window.addEventListener('scroll', () => { const bar = document.getElementById('scroll-bar'); if (!bar) return; const winScroll = document.documentElement.scrollTop || document.body.scrollTop; const height = document.documentElement.scrollHeight - document.documentElement.clientHeight; const scrolled = height > 0 ? (winScroll / height) * 100 : 0; bar.style.width = scrolled + '%'; }, { passive: true });</script></body></html>

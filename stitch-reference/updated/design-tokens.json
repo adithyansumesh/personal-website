@@ -1,0 +1,166 @@
+{
+    "colorMode":  "DARK",
+    "font":  "SPACE_GROTESK",
+    "roundness":  "ROUND_EIGHT",
+    "customColor":  "#3b82f6",
+    "headlineFont":  "SPACE_GROTESK",
+    "bodyFont":  "INTER",
+    "labelFont":  "JETBRAINS_MONO",
+    "namedColors":  {
+                        "surface_bright":  "#383941",
+                        "on_tertiary_container":  "#002f38",
+                        "inverse_on_surface":  "#2f3038",
+                        "on_surface_variant":  "#c2c6d6",
+                        "secondary_fixed":  "#e9ddff",
+                        "surface_container_high":  "#292931",
+                        "surface_dim":  "#12131a",
+                        "surface_tint":  "#adc6ff",
+                        "on_secondary_fixed":  "#23005c",
+                        "primary_fixed":  "#d8e2ff",
+                        "surface":  "#12131a",
+                        "tertiary_fixed_dim":  "#4cd7f6",
+                        "tertiary_container":  "#009eb9",
+                        "inverse_surface":  "#e3e1ec",
+                        "surface_container_highest":  "#34343c",
+                        "surface_container":  "#1e1f27",
+                        "background":  "#12131a",
+                        "surface_variant":  "#34343c",
+                        "on_secondary_container":  "#c4abff",
+                        "surface_container_lowest":  "#0d0e15",
+                        "outline_variant":  "#424754",
+                        "on_background":  "#e3e1ec",
+                        "on_primary_container":  "#00285d",
+                        "tertiary":  "#4cd7f6",
+                        "on_primary":  "#002e6a",
+                        "on_primary_fixed_variant":  "#004395",
+                        "on_primary_fixed":  "#001a42",
+                        "primary_container":  "#4d8eff",
+                        "secondary_fixed_dim":  "#d0bcff",
+                        "secondary":  "#d0bcff",
+                        "on_tertiary":  "#003640",
+                        "secondary_container":  "#571bc1",
+                        "inverse_primary":  "#005ac2",
+                        "outline":  "#8c909f",
+                        "on_error":  "#690005",
+                        "on_secondary":  "#3c0091",
+                        "on_secondary_fixed_variant":  "#5516be",
+                        "error":  "#ffb4ab",
+                        "surface_container_low":  "#1a1b22",
+                        "on_tertiary_fixed_variant":  "#004e5c",
+                        "tertiary_fixed":  "#acedff",
+                        "on_tertiary_fixed":  "#001f26",
+                        "primary_fixed_dim":  "#adc6ff",
+                        "primary":  "#adc6ff",
+                        "error_container":  "#93000a",
+                        "on_error_container":  "#ffdad6",
+                        "on_surface":  "#e3e1ec"
+                    },
+    "designMd":  "---\nname: Obsidian Kinetic\ncolors:\n  surface: \u0027#12131a\u0027\n  surface-dim: \u0027#12131a\u0027\n  surface-bright: \u0027#383941\u0027\n  surface-container-lowest: \u0027#0d0e15\u0027\n  surface-container-low: \u0027#1a1b22\u0027\n  surface-container: \u0027#1e1f27\u0027\n  surface-container-high: \u0027#292931\u0027\n  surface-container-highest: \u0027#34343c\u0027\n  on-surface: \u0027#e3e1ec\u0027\n  on-surface-variant: \u0027#c2c6d6\u0027\n  inverse-surface: \u0027#e3e1ec\u0027\n  inverse-on-surface: \u0027#2f3038\u0027\n  outline: \u0027#8c909f\u0027\n  outline-variant: \u0027#424754\u0027\n  surface-tint: \u0027#adc6ff\u0027\n  primary: \u0027#adc6ff\u0027\n  on-primary: \u0027#002e6a\u0027\n  primary-container: \u0027#4d8eff\u0027\n  on-primary-container: \u0027#00285d\u0027\n  inverse-primary: \u0027#005ac2\u0027\n  secondary: \u0027#d0bcff\u0027\n  on-secondary: \u0027#3c0091\u0027\n  secondary-container: \u0027#571bc1\u0027\n  on-secondary-container: \u0027#c4abff\u0027\n  tertiary: \u0027#4cd7f6\u0027\n  on-tertiary: \u0027#003640\u0027\n  tertiary-container: \u0027#009eb9\u0027\n  on-tertiary-container: \u0027#002f38\u0027\n  error: \u0027#ffb4ab\u0027\n  on-error: \u0027#690005\u0027\n  error-container: \u0027#93000a\u0027\n  on-error-container: \u0027#ffdad6\u0027\n  primary-fixed: \u0027#d8e2ff\u0027\n  primary-fixed-dim: \u0027#adc6ff\u0027\n  on-primary-fixed: \u0027#001a42\u0027\n  on-primary-fixed-variant: \u0027#004395\u0027\n  secondary-fixed: \u0027#e9ddff\u0027\n  secondary-fixed-dim: \u0027#d0bcff\u0027\n  on-secondary-fixed: \u0027#23005c\u0027\n  on-secondary-fixed-variant: \u0027#5516be\u0027\n  tertiary-fixed: \u0027#acedff\u0027\n  tertiary-fixed-dim: \u0027#4cd7f6\u0027\n  on-tertiary-fixed: \u0027#001f26\u0027\n  on-tertiary-fixed-variant: \u0027#004e5c\u0027\n  background: \u0027#12131a\u0027\n  on-background: \u0027#e3e1ec\u0027\n  surface-variant: \u0027#34343c\u0027\ntypography:\n  display:\n    fontFamily: Space Grotesk\n    fontSize: 56px\n    fontWeight: \u0027700\u0027\n    lineHeight: 64px\n    letterSpacing: -0.03em\n  display-mobile:\n    fontFamily: Space Grotesk\n    fontSize: 36px\n    fontWeight: \u0027700\u0027\n    lineHeight: 44px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Space Grotesk\n    fontSize: 40px\n    fontWeight: \u0027600\u0027\n    lineHeight: 48px\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Space Grotesk\n    fontSize: 28px\n    fontWeight: \u0027600\u0027\n    lineHeight: 36px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Space Grotesk\n    fontSize: 28px\n    fontWeight: \u0027600\u0027\n    lineHeight: 36px\n    letterSpacing: -0.01em\n  headline-sm:\n    fontFamily: Space Grotesk\n    fontSize: 20px\n    fontWeight: \u0027500\u0027\n    lineHeight: 28px\n    letterSpacing: \u00270\u0027\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: \u0027400\u0027\n    lineHeight: 28px\n    letterSpacing: -0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 15px\n    fontWeight: \u0027400\u0027\n    lineHeight: 24px\n    letterSpacing: \u00270\u0027\n  body-sm:\n    fontFamily: Inter\n    fontSize: 13px\n    fontWeight: \u0027400\u0027\n    lineHeight: 20px\n    letterSpacing: \u00270\u0027\n  code-md:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: \u0027500\u0027\n    lineHeight: 22px\n    letterSpacing: -0.01em\n  code-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: \u0027400\u0027\n    lineHeight: 18px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 11px\n    fontWeight: \u0027600\u0027\n    lineHeight: 16px\n    letterSpacing: 0.08em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  gutter: 1.5rem\n  gutter-mobile: 1rem\n  margin: 2rem\n  margin-mobile: 1.25rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2.5rem\n  space-2xl: 4rem\n---\n\n## Brand \u0026 Style\n\nThis design system crafts an immersive, high-precision personal portfolio space for an elite AI engineer and computer science undergraduate. The brand aesthetic merges the rigor of deep systems engineering with the kinetic luminescence of frontier machine learning research. It projects authority, intellectual curiosity, technical craft, and refined digital architecture.\n\nThe visual style blends **Modern Dark Minimalism** with **Hyper-Refined Glassmorphism** and **Tactile Engineering Accents**:\n- **Tonal Abyss**: Deep, light-absorbing near-black grounds allow vibrant spectral accents to carry dimensional weight without visual clutter.\n- **Micro-Luminescence**: Restrained, calibrated ambient halos and micro-gradient borders simulate an illuminated glass console.\n- **Instrument Precision**: Monospaced engineering instrumentation, technical metadata tags, and sharp typography communicate structural discipline and analytical rigor.\n\n## Colors\n\nThe palette revolves around deep, cold spatial foundations intersected by energetic computational spectra:\n\n- **Surface Tiers**:\n  - `Canvas / Abyss`: `#07070A` forms the absolute ground.\n  - `Surface Low (Cards/Panels)`: `#0D0E15` with varying alpha layers (`rgba(13, 14, 21, 0.7)`).\n  - `Surface High (Popovers/Overlays)`: `#161824` with structural clarity.\n- **Spectral Energy**:\n  - `Primary (Electric Cobalt)`: `#3B82F6` delivers foundational actions, active states, and focal nodes.\n  - `Secondary (Violet-Indigo)`: `#8B5CF6` bridges cognitive depth in gradients, state progressions, and research vectors.\n  - `Tertiary (Hyper Cyan)`: `#06B6D4` serves as high-voltage feedback, active status badges, terminal outputs, and live node indicators.\n- **Neutrals \u0026 Texts**:\n  - `Text High Contrast`: `#F3F4F6` for display headlines and active metrics.\n  - `Text Body / Subdued`: `#9CA3AF` for analytical descriptions and context.\n  - `Text Muted / Code Key`: `#6B7280` for technical parameters and metadata.\n  - `Border / Hairline Highlight`: `rgba(255, 255, 255, 0.08)` to `rgba(255, 255, 255, 0.16)` on hover or activation.\n\n## Typography\n\nThe typographic hierarchy establishes clear tension between geometric humanism and computational density:\n- **Headlines (`Space Grotesk`)**: Provides an authoritative, engineered, forward-looking tone with tight tracking and distinct geometric character cuts.\n- **Longform \u0026 Narration (`Inter`)**: Delivers effortless reading efficiency, neutral texture, and optimal accessibility across dense technical abstracts and project statements.\n- **System Tags, Badges \u0026 Code Blocks (`JetBrains Mono`)**: Accents structural metadata, model specifications, training parameters, latency metrics, and file extensions with monospaced precision.\n\n## Layout \u0026 Spacing\n\nThe layout model executes on a **12-column responsive fluid grid** anchored by a max-width container of `1280px` for optimal technical data density:\n\n- **Desktop (\u003e=1024px)**: 12 columns, `1.5rem` gutters, and `2rem` outer page margins. Architectural layouts balance high-information density cards with deliberate negative space for focused reading.\n- **Tablet (768px - 1023px)**: 8 columns, `1.25rem` gutters, and `1.5rem` margins. Complex multi-metric cards consolidate to dual-column structures.\n- **Mobile (\u003c768px)**: 4 columns, `1rem` gutters, and `1.25rem` margins. Grids stack into single vertical operational streams with horizontal overflow scrolling reserved for monospaced benchmarks and tech stack strips.\n- **Rhythm**: Internal card gaps utilize strict `0.5rem` (`space-sm`) and `1rem` (`space-md`) increments, while structural content sections separate at `2.5rem` (`space-xl`) to `4rem` (`space-2xl`).\n\n## Elevation \u0026 Depth\n\nDimensionality is achieved without conventional drop shadows, leaning instead into **optical translucency, illuminated perimeter hairlines, and ambient radiation**:\n\n- **Glassmorphism Layers**:\n  - `Base Floor`: Solid `#07070A`.\n  - `Card Ground`: `rgba(13, 14, 21, 0.65)` layered over backdrop-filter blur (`16px` to `24px`).\n  - `Sub-components \u0026 Code Insets`: `rgba(7, 7, 10, 0.8)` with inset backdrop blur.\n- **Illuminated Edge Architecture**:\n  - Baseline elements feature a razor-sharp `1px` border using `rgba(255, 255, 255, 0.08)`.\n  - On hover or selection, the top and left borders shift to a subtle linear gradient: `linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(139, 92, 246, 0.2) 60%, rgba(255, 255, 255, 0.05))`.\n- **Atmospheric Halos**:\n  - Cards and hero nodes emit ultra-diffused, low-opacity directional glows: `box-shadow: 0 0 60px -15px rgba(59, 130, 246, 0.15), 0 0 100px -30px rgba(139, 92, 246, 0.1)`.\n  - Interactive highlights leverage localized radial gradients centered on cursor interaction.\n\n## Shapes\n\nThe design system implements a **precision-curved shape profile** (Level 2: `0.5rem` / `8px` baseline):\n- **Base Surfaces \u0026 Cards**: `rounded-lg` (`1rem` / `16px`) establishes an ergonomic frame that softens the deep-contrast background.\n- **Interactive Controls \u0026 Inputs**: `rounded` (`0.5rem` / `8px`) provides compact, tactile affordance for buttons, inputs, and tab triggers.\n- **Pill Badges \u0026 Status Indicators**: Fully rounded capsules (`9999px`) reserved specifically for architecture tags (`PyTorch`, `CUDA`, `Transformer`), live model status dots, and commit hashes.\n\n## Components\n\n### Buttons\n- **Primary Kinetic**: High-contrast gradient fill `linear-gradient(135deg, #3B82F6, #8B5CF6)` with white text (`Space Grotesk`, medium), `1px` inner highlight border, and subtle ambient blur glow on hover (`0 0 20px rgba(59, 130, 246, 0.4)`).\n- **Secondary Glass**: `rgba(255, 255, 255, 0.04)` fill, `1px` border of `rgba(255, 255, 255, 0.12)`, text in `#F3F4F6`. Transforms to `rgba(255, 255, 255, 0.08)` on hover with crisp boundary brightening.\n- **Monospace Icon Action**: Compact square button (`rounded`), monospaced glyph, border `rgba(255, 255, 255, 0.08)`, subtle cyan highlight on active state.\n\n### Translucent Project Cards\n- **Construction**: Backing fill `rgba(13, 14, 21, 0.7)` with `20px` backdrop blur, wrapped in a uniform `1px` border `rgba(255, 255, 255, 0.08)`.\n- **Interaction**: Mouse hover triggers border brightening (`rgba(59, 130, 246, 0.5)`), a soft ambient blue/violet glow underneath, and a slight Y-axis translation (`-2px`).\n- **Header Structure**: Displays repo/project title in `Space Grotesk` accompanied by an inline monospaced latency or parameter metric (e.g., `[7B-LoRA]`, `[\u003c12ms]`).\n\n### Code \u0026 Tech Chips\n- **Styling**: `JetBrains Mono`, `12px`, padding `0.25rem 0.625rem`, capsule radius.\n- **Colorway**: `rgba(6, 182, 212, 0.08)` fill, `1px` border `rgba(6, 182, 212, 0.2)`, text `#06B6D4` for active runtime flags; `rgba(255, 255, 255, 0.04)` fill, `rgba(255, 255, 255, 0.08)` border, text `#9CA3AF` for static skill tags.\n\n### Input Fields \u0026 Terminal Emulators\n- **Form Controls**: `rgba(7, 7, 10, 0.8)` background, `1px` border `rgba(255, 255, 255, 0.1)`, `0.5rem` radius. Focus shifts border to `#3B82F6` with a `0 0 0 3px rgba(59, 130, 246, 0.2)` ring.\n- **Interactive Terminal Block**: Dark inset box (`#07070A`) with header controls (three 8px status pips), terminal text in `JetBrains Mono` (`#06B6D4` prompts, `#9CA3AF` output strings), and an animated trailing block cursor.\n\n### Metrics \u0026 Research Badges\n- Modular data tiles showcasing throughput, GitHub stats, or model accuracies with high-contrast numerals (`Space Grotesk`, bold) paired with all-caps uppercase micro-labels (`JetBrains Mono`, `11px`, tracking `0.08em`).",
+    "colorVariant":  "FIDELITY",
+    "overridePrimaryColor":  "#3b82f6",
+    "overrideSecondaryColor":  "#8b5cf6",
+    "overrideTertiaryColor":  "#06b6d4",
+    "overrideNeutralColor":  "#0d0e15",
+    "spacingScale":  2,
+    "typography":  {
+                       "label-caps":  {
+                                          "fontFamily":  "JetBrains Mono",
+                                          "fontSize":  "11px",
+                                          "fontWeight":  "600",
+                                          "lineHeight":  "16px",
+                                          "letterSpacing":  "0.08em"
+                                      },
+                       "headline-md":  {
+                                           "fontFamily":  "Space Grotesk",
+                                           "fontSize":  "28px",
+                                           "fontWeight":  "600",
+                                           "lineHeight":  "36px",
+                                           "letterSpacing":  "-0.01em"
+                                       },
+                       "headline-sm":  {
+                                           "fontFamily":  "Space Grotesk",
+                                           "fontSize":  "20px",
+                                           "fontWeight":  "500",
+                                           "lineHeight":  "28px",
+                                           "letterSpacing":  "0"
+                                       },
+                       "code-sm":  {
+                                       "fontFamily":  "JetBrains Mono",
+                                       "fontSize":  "12px",
+                                       "fontWeight":  "400",
+                                       "lineHeight":  "18px",
+                                       "letterSpacing":  "0.02em"
+                                   },
+                       "body-md":  {
+                                       "fontFamily":  "Inter",
+                                       "fontSize":  "15px",
+                                       "fontWeight":  "400",
+                                       "lineHeight":  "24px",
+                                       "letterSpacing":  "0"
+                                   },
+                       "code-md":  {
+                                       "fontFamily":  "JetBrains Mono",
+                                       "fontSize":  "14px",
+                                       "fontWeight":  "500",
+                                       "lineHeight":  "22px",
+                                       "letterSpacing":  "-0.01em"
+                                   },
+                       "body-lg":  {
+                                       "fontFamily":  "Inter",
+                                       "fontSize":  "18px",
+                                       "fontWeight":  "400",
+                                       "lineHeight":  "28px",
+                                       "letterSpacing":  "-0.01em"
+                                   },
+                       "headline-lg":  {
+                                           "fontFamily":  "Space Grotesk",
+                                           "fontSize":  "40px",
+                                           "fontWeight":  "600",
+                                           "lineHeight":  "48px",
+                                           "letterSpacing":  "-0.02em"
+                                       },
+                       "body-sm":  {
+                                       "fontFamily":  "Inter",
+                                       "fontSize":  "13px",
+                                       "fontWeight":  "400",
+                                       "lineHeight":  "20px",
+                                       "letterSpacing":  "0"
+                                   },
+                       "headline-lg-mobile":  {
+                                                  "fontFamily":  "Space Grotesk",
+                                                  "fontSize":  "28px",
+                                                  "fontWeight":  "600",
+                                                  "lineHeight":  "36px",
+                                                  "letterSpacing":  "-0.01em"
+                                              },
+                       "display":  {
+                                       "fontFamily":  "Space Grotesk",
+                                       "fontSize":  "56px",
+                                       "fontWeight":  "700",
+                                       "lineHeight":  "64px",
+                                       "letterSpacing":  "-0.03em"
+                                   },
+                       "display-mobile":  {
+                                              "fontFamily":  "Space Grotesk",
+                                              "fontSize":  "36px",
+                                              "fontWeight":  "700",
+                                              "lineHeight":  "44px",
+                                              "letterSpacing":  "-0.02em"
+                                          }
+                   },
+    "spacing":  {
+                    "space-xl":  "2.5rem",
+                    "margin-mobile":  "1.25rem",
+                    "gutter-mobile":  "1rem",
+                    "space-md":  "1rem",
+                    "space-2xl":  "4rem",
+                    "space-sm":  "0.5rem",
+                    "gutter":  "1.5rem",
+                    "space-xs":  "0.25rem",
+                    "margin":  "2rem",
+                    "space-lg":  "1.5rem"
+                },
+    "headlineFontFamily":  "Space Grotesk",
+    "bodyFontFamily":  "Inter",
+    "labelFontFamily":  "JetBrains Mono"
+}

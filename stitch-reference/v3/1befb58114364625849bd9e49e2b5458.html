@@ -1,0 +1,550 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><title>Home</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131313;color:#e5e2e1;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-background": "#e5e2e1", "primary-fixed": "#5bffa1", "on-secondary-container": "#b4b5b5", "outline": "#849586", "on-primary": "#00391d", "on-error-container": "#ffdad6", "primary": "#f9fff6", "surface-tint": "#00e383", "tertiary": "#fefdfc", "on-surface": "#e5e2e1", "inverse-on-surface": "#313030", "on-secondary": "#2f3131", "on-primary-container": "#00723f", "inverse-surface": "#e5e2e1", "surface-container-lowest": "#0e0e0e", "secondary": "#c6c6c7", "secondary-container": "#454747", "on-tertiary-fixed-variant": "#464747", "on-tertiary-fixed": "#1b1c1c", "primary-fixed-dim": "#00e383", "on-secondary-fixed": "#1a1c1c", "on-tertiary-container": "#636363", "tertiary-fixed": "#e3e2e2", "on-primary-fixed": "#00210e", "on-error": "#690005", "surface-bright": "#3a3939", "surface-container-highest": "#353534", "inverse-primary": "#006d3c", "background": "#131313", "error-container": "#93000a", "primary-container": "#3dff9a", "tertiary-fixed-dim": "#c7c6c6", "surface-container-high": "#2a2a2a", "secondary-fixed": "#e2e2e2", "surface-container-low": "#1c1b1b", "on-primary-fixed-variant": "#00522c", "surface-dim": "#131313", "error": "#ffb4ab", "outline-variant": "#3b4a3e", "surface-variant": "#353534", "secondary-fixed-dim": "#c6c6c7", "on-surface-variant": "#bacbbb", "surface": "#131313", "on-tertiary": "#2f3031", "tertiary-container": "#e1e0e0", "surface-container": "#201f1f", "on-secondary-fixed-variant": "#454747" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { "space-lg": "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-2xl": "6rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", gutter: "1.5rem", margin: "3rem", "space-xl": "3rem", "gutter-mobile": "1rem" }, fontFamily: { "mono-code": ["JetBrains Mono"], "headline-md": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "body-lg": ["Inter"], "headline-sm": ["Space Grotesk"], "mono-lg": ["JetBrains Mono"], "headline-lg-mobile": ["Space Grotesk"], "display-hero": ["Space Grotesk"], "body-md": ["Inter"], "label-mono": ["JetBrains Mono"] }, fontSize: { "mono-code": ["0.8125rem", { lineHeight: "1.375rem", letterSpacing: "0em", fontWeight: "400" }], "headline-md": ["1.75rem", { lineHeight: "2.125rem", letterSpacing: "-0.02em", fontWeight: "500" }], "headline-lg": ["3rem", { lineHeight: "3.25rem", letterSpacing: "-0.035em", fontWeight: "600" }], "display-hero-mobile": ["2.75rem", { lineHeight: "3rem", letterSpacing: "-0.04em", fontWeight: "700" }], "body-lg": ["1.125rem", { lineHeight: "1.875rem", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-sm": ["1.25rem", { lineHeight: "1.625rem", letterSpacing: "-0.015em", fontWeight: "500" }], "mono-lg": ["0.9375rem", { lineHeight: "1.5rem", letterSpacing: "-0.02em", fontWeight: "500" }], "headline-lg-mobile": ["2rem", { lineHeight: "2.25rem", letterSpacing: "-0.03em", fontWeight: "600" }], "display-hero": ["5rem", { lineHeight: "5rem", letterSpacing: "-0.05em", fontWeight: "700" }], "body-md": ["0.9375rem", { lineHeight: "1.625rem", letterSpacing: "0em", fontWeight: "400" }], "label-mono": ["0.6875rem", { lineHeight: "1rem", letterSpacing: "0.08em", fontWeight: "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen antialiased selection:bg-primary-container selection:text-on-primary-fixed"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true"><div class="star-dot" style="top:4%;left:12%;width:2px;height:2px;--min-op:0.2;--max-op:0.75;animation-duration:3.2s;animation-delay:0.2s;"></div><div class="star-dot" style="top:7%;left:82%;width:1.5px;height:1.5px;--min-op:0.15;--max-op:0.6;animation-duration:4.1s;animation-delay:1.1s;"></div><div class="star-dot" style="top:11%;left:44%;width:1px;height:1px;--min-op:0.1;--max-op:0.5;animation-duration:2.8s;animation-delay:0.7s;"></div><div class="star-glint" style="top:14%;left:90%;width:8px;height:8px;animation-duration:5.2s;animation-delay:0.5s;"></div><div class="star-dot" style="top:18%;left:6%;width:2.5px;height:2.5px;--min-op:0.25;--max-op:0.85;box-shadow:0 0 4px #3dff9a;animation-duration:3.6s;animation-delay:1.8s;"></div><div class="star-dot" style="top:22%;left:31%;width:1.5px;height:1.5px;--min-op:0.15;--max-op:0.55;animation-duration:4.5s;animation-delay:2.3s;"></div><div class="star-dot" style="top:26%;left:76%;width:2px;height:2px;--min-op:0.2;--max-op:0.7;animation-duration:3.9s;animation-delay:0.4s;"></div><div class="star-glint" style="top:32%;left:18%;width:7px;height:7px;animation-duration:4.8s;animation-delay:2.1s;"></div><div class="star-dot" style="top:37%;left:88%;width:1px;height:1px;--min-op:0.15;--max-op:0.5;animation-duration:3.1s;animation-delay:1.5s;"></div><div class="star-dot" style="top:42%;left:5%;width:2px;height:2px;--min-op:0.2;--max-op:0.65;animation-duration:4.2s;animation-delay:0.9s;"></div><div class="star-dot" style="top:48%;left:62%;width:1.5px;height:1.5px;--min-op:0.1;--max-op:0.45;animation-duration:3.5s;animation-delay:2.7s;"></div><div class="star-glint" style="top:54%;left:84%;width:9px;height:9px;animation-duration:6.0s;animation-delay:1.2s;"></div><div class="star-dot" style="top:59%;left:22%;width:2px;height:2px;--min-op:0.2;--max-op:0.75;animation-duration:4.0s;animation-delay:0.8s;"></div><div class="star-dot" style="top:63%;left:71%;width:1px;height:1px;--min-op:0.15;--max-op:0.5;animation-duration:3.3s;animation-delay:1.9s;"></div><div class="star-dot" style="top:68%;left:9%;width:2.5px;height:2.5px;--min-op:0.25;--max-op:0.8;box-shadow:0 0 4px #3dff9a;animation-duration:4.7s;animation-delay:0.3s;"></div><div class="star-glint" style="top:73%;left:38%;width:8px;height:8px;animation-duration:5.5s;animation-delay:2.9s;"></div><div class="star-dot" style="top:79%;left:92%;width:1.5px;height:1.5px;--min-op:0.15;--max-op:0.6;animation-duration:3.7s;animation-delay:1.4s;"></div><div class="star-dot" style="top:84%;left:15%;width:1px;height:1px;--min-op:0.1;--max-op:0.45;animation-duration:4.3s;animation-delay:2.5s;"></div><div class="star-dot" style="top:88%;left:67%;width:2px;height:2px;--min-op:0.2;--max-op:0.7;animation-duration:3.4s;animation-delay:0.6s;"></div><div class="star-glint" style="top:93%;left:28%;width:7px;height:7px;animation-duration:4.9s;animation-delay:1.7s;"></div><div class="star-dot" style="top:96%;left:81%;width:2px;height:2px;--min-op:0.2;--max-op:0.65;animation-duration:3.8s;animation-delay:3.1s;"></div></div><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center space-x-space-sm"><span class="w-2 h-2 bg-primary-container inline-block animate-pulse"></span><span class="font-label-mono text-label-mono uppercase text-secondary tracking-widest">SYS.IDX //</span><span class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-tight">Home</span></div><div class="flex items-center space-x-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-32 bg-surface px-margin-mobile"><div class="flex flex-col w-full space-y-space-xl">
+<!-- 1. System Boot & Status Bar Pill -->
+<section class="flex items-center justify-between bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="flex items-center space-x-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface">SYS:ONLINE // PHOSPHOR_V2</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary-container bg-surface-container px-space-xs py-0.5 rounded">LOC: 9.38°N 76.57°E</span>
+</section>
+<!-- 2. Hero Section -->
+<section class="flex flex-col space-y-space-md">
+<div class="flex items-center space-x-space-xs text-primary-container font-mono-code text-mono-code">
+<span>$</span>
+<span class="text-on-surface-variant">whoami</span>
+</div>
+<!-- Stacked Giant Editorial Typo -->
+<div class="flex flex-col">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile uppercase tracking-tighter text-on-surface leading-none">
+        ADITHYAN<br>SUMESH
+      </h1>
+<p class="font-label-mono text-label-mono uppercase tracking-widest text-primary-container mt-space-xs">
+        B.Tech Computer Science &amp; Engineering — Artificial Intelligence
+      </p>
+</div>
+<!-- Grayscale Portrait with Phosphor Green Badge -->
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-low shadow-md">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Monochrome moody grayscale editorial portrait of an Indian male computer science engineer sitting in a dark technical lab setting with subtle phosphor green terminal glow reflecting on his face, sharp contrast, cinematic minimalist composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASqIjuzqrMV_St0ZsmPEaBgQR0AUtUR1ERorCiQJ_DkuTxinq6Lfv8N_HX_qE_SsbEbgzK4_a8WKfnXGT7QNkd1PYhyb08Ro7kDA0XCACh7NNx0V8tBB7oTTra05mubq7Z9346ex0wE6uur8TVQY7T2D4XAgUBLVeTj2q8Ow3hDS8pcQiY8i9P_iy307Vt5pXV5wId2uPy7t6bKuDf5uKJ1F-ZXqiSv2nt49qTHlw">
+<div class="absolute bottom-space-md left-space-md flex items-center space-x-space-xs bg-surface-container-lowest/90 backdrop-blur-md px-space-sm py-space-xs rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-mono text-label-mono text-on-surface uppercase tracking-wider">ACTIVE_RESEARCHER // 2026</span>
+</div>
+</div>
+<!-- Bio Statement -->
+<p class="font-body-md text-body-md text-on-surface-variant">
+      Obsessed with engineering intelligent systems at the intersection of deep generative models, applied machine intelligence, and high-performance tactile interfaces.
+    </p>
+<!-- CTAs & Socials -->
+<div class="flex flex-col space-y-space-sm pt-space-xs">
+<div class="flex gap-space-sm">
+<a class="flex-1 bg-primary text-on-primary font-mono-code text-mono-code py-space-sm px-space-md rounded text-center font-medium hover:bg-primary-container transition-colors" href="#projects">
+          View My Projects →
+        </a>
+<a class="flex-1 bg-surface-container-high text-on-surface font-mono-code text-mono-code py-space-sm px-space-md rounded text-center hover:bg-surface-bright transition-colors" href="#resume">
+          Download Resume
+        </a>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-label-mono text-label-mono uppercase text-secondary">NETWORKS:</span>
+<div class="flex items-center space-x-space-md text-on-surface font-mono-code text-mono-code">
+<a class="hover:text-primary-container transition-colors" href="#">GH</a>
+<span class="text-surface-container-highest">/</span>
+<a class="hover:text-primary-container transition-colors" href="#">LN</a>
+<span class="text-surface-container-highest">/</span>
+<a class="hover:text-primary-container transition-colors" href="#">X</a>
+<span class="text-surface-container-highest">/</span>
+<a class="hover:text-primary-container transition-colors" href="#">KGL</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Retro CRT Terminal Preview Card -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-lg flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-xs">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">DECK // CRT-404</span>
+</div>
+<button class="flex items-center space-x-space-xs bg-surface-container px-space-sm py-0.5 rounded text-left" id="terminalToggleBtn">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse" id="terminalLed"></span>
+<span class="font-label-mono text-label-mono uppercase text-on-surface" id="terminalStateText">SYS: ON</span>
+</button>
+</div>
+<!-- Terminal Display Screen -->
+<div class="bg-surface-container-low p-space-md rounded-lg min-h-[120px] flex flex-col justify-between transition-all duration-300" id="terminalScreen">
+<div class="font-mono-code text-mono-code text-primary-container space-y-1">
+<p class="text-on-surface-variant">// VIRTUAL WORKSTATION</p>
+<p id="terminalTypingLine">&gt; loading portfolio index... [DONE]</p>
+<p class="flex items-center">
+<span>&gt; ready for command</span>
+<span class="inline-block w-2 h-4 bg-primary-container ml-1 animate-pulse"></span>
+</p>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-mono text-label-mono pt-space-xs">
+<span>MEM: 64MB OK</span>
+<span>BAUD: 9600</span>
+</div>
+</div>
+</section>
+<!-- 4. About Me (Verbatim Cards 1, 2, 3) -->
+<section class="flex flex-col space-y-space-md">
+<div class="flex items-center space-x-space-xs font-mono-code text-mono-code text-primary-container">
+<span>&gt;</span>
+<span class="text-on-surface uppercase tracking-wider font-headline-sm text-headline-sm">about</span>
+</div>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-mono text-label-mono text-primary-container uppercase">MANIFEST // 01</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Applied Intelligence Architect</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        I specialize in turning deep theoretical artificial intelligence principles into deployable real-world applications. Driven by curiosity and system discipline, my focus spans from predictive neural architectures to intuitive, humane user interactions.
+      </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-mono text-label-mono text-primary-container uppercase">MANIFEST // 02</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">rocket_launch</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Bridging Research &amp; Delivery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        With hands-on experience in space payload tracking, aerospace simulation, and clinical assistive pipelines, I treat every project as a rigorous laboratory experiment engineered for resilience, fault tolerance, and uncompromising speed.
+      </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-mono text-label-mono text-primary-container uppercase">MANIFEST // 03</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">code_blocks</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">End-to-End Craft</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        From fine-tuning transformer models on tailored data distributions to engineering deterministic API backends and sleek minimal mobile interfaces, I build the full continuum of modern AI products.
+      </p>
+</div>
+</section>
+<!-- 5. Technical Skills (Mobile Bento Grid with Circular Badges) -->
+<section class="flex flex-col space-y-space-md">
+<div class="flex items-center space-x-space-xs font-mono-code text-mono-code text-primary-container">
+<span>&gt;</span>
+<span class="text-on-surface uppercase tracking-wider font-headline-sm text-headline-sm">skills</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Card 1: Programming Languages -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-secondary uppercase">SYS.STACK // 01</span>
+<span class="font-label-mono text-label-mono text-primary-container">CORE</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Programming Languages</h4>
+<div class="flex flex-wrap gap-space-xs">
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Python</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">C++</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">JavaScript</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">SQL</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Bash</span>
+</div>
+</div>
+<!-- Card 2: AI & Machine Learning -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-secondary uppercase">SYS.STACK // 02</span>
+<span class="font-label-mono text-label-mono text-primary-container">NEURAL</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">AI &amp; Machine Learning</h4>
+<div class="flex flex-wrap gap-space-xs">
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">PyTorch</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">TensorFlow</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">LLMs</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Computer Vision</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Transformers</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Scikit-Learn</span>
+</div>
+</div>
+<!-- Card 3: Libraries & Web -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-secondary uppercase">SYS.STACK // 03</span>
+<span class="font-label-mono text-label-mono text-primary-container">INFRA</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Libraries &amp; Web</h4>
+<div class="flex flex-wrap gap-space-xs">
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">FastAPI</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Flask</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">React</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">TailwindCSS</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">NumPy</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Pandas</span>
+</div>
+</div>
+<!-- Card 4: Tools & Platforms -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-secondary uppercase">SYS.STACK // 04</span>
+<span class="font-label-mono text-label-mono text-primary-container">ENV</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Tools &amp; DevOps</h4>
+<div class="flex flex-wrap gap-space-xs">
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Docker</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Git</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Linux</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">AWS</span>
+<span class="inline-flex items-center px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-mono text-label-mono">Hugging Face</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Featured Projects -->
+<section class="flex flex-col space-y-space-md" id="projects">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-xs font-mono-code text-mono-code text-primary-container">
+<span>&gt;</span>
+<span class="text-on-surface uppercase tracking-wider font-headline-sm text-headline-sm">projects</span>
+</div>
+<span class="font-label-mono text-label-mono text-secondary">[COUNT: 04]</span>
+</div>
+<!-- Project 1: MovieMind AI -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-sm shadow-md">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Digital cinematic terminal dashboard visualizing movie recommendation neural networks, vector cluster embeddings in dark green and charcoal, clean minimal UI with high contrast data nodes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcy1Hw8MMiGiJS0dMv0yGHp6RoURyskjpUgoFZEeWd8fbn590_QZwXhwslSg2iP9RrOPSc53XtGsgBgfnbuBWwxq4m_E7ESI-xBDJKNw4Jb-hgjDrP1b0UduO_sa1qi19A8LrjdKFEDdVLmuDLWiCwNxsZxbrabihsIRsm2mb-7rRTnayccAY7XyM-7p7wnwrGsoj3wAgWoKoFAfjD8JYhDgHHUpy2yVK9iTBzXcg">
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-mono text-label-mono text-primary-container uppercase">IDX // 01</span>
+<span class="font-mono-code text-mono-code text-secondary">2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">MovieMind AI</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Context-aware semantic recommendation engine powered by vector embeddings and sentiment clustering across multimodal review data.
+      </p>
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">FastAPI</span>
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">SentenceTransformers</span>
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">ChromaDB</span>
+</div>
+<div class="flex items-center space-x-space-sm pt-space-xs">
+<button class="bg-primary text-on-primary font-mono-code text-mono-code px-space-sm py-1 rounded font-medium hover:bg-primary-container transition-colors">
+          Live Demo →
+        </button>
+<button class="bg-surface-container-high text-on-surface font-mono-code text-mono-code px-space-sm py-1 rounded hover:bg-surface-bright transition-colors">
+          Source [GH]
+        </button>
+</div>
+</div>
+<!-- Project 2: Order Assistant -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-sm shadow-md">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Technical wireframe UI of an automated natural language conversational agent for food order extraction, dark mode editorial theme with terminal code snippets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6zU_uoaDfHZhLgYhe69pRsnGb5-OhBuvQYZ4AZWvfjErNmWE0OU4oAf8jipLKsS3_f_V_o-pXe66irNCAgZMz1GkWcXXTp0pGqY2H1qV3VYqCEgaH-LmNTnGauogNipODC7-qc1VAbhEgu7KGxUSeVYFTuOoCsz1LiD-s5gwMSdex395N2wdttLNRb2IJMtnw5D0TVZ5ki3Fpl04Jbghkbs5u1U768vA0okYxuO4">
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-mono text-label-mono text-primary-container uppercase">IDX // 02</span>
+<span class="font-mono-code text-mono-code text-secondary">2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Conversational Order Assistant</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        End-to-end voice and text conversational ordering pipeline built for quick-service retail with slot-filling and real-time inventory hooks.
+      </p>
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">Python</span>
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">Whisper</span>
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">Rasa NLP</span>
+</div>
+<div class="flex items-center space-x-space-sm pt-space-xs">
+<button class="bg-primary text-on-primary font-mono-code text-mono-code px-space-sm py-1 rounded font-medium hover:bg-primary-container transition-colors">
+          Live Demo →
+        </button>
+<button class="bg-surface-container-high text-on-surface font-mono-code text-mono-code px-space-sm py-1 rounded hover:bg-surface-bright transition-colors">
+          Source [GH]
+        </button>
+</div>
+</div>
+<!-- Project 3: Ai Humanizer -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-sm shadow-md">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Editorial syntax graph highlighting synthetic text detection analysis and entropy scoring, dark aesthetic with crisp typography and phosphor green metrics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQTrwViY7_RIpEilmRjxDTFOtMdhvzWJMbgjurx6TVjKI_c8PDMCNRRDDBz8lMc0u2OVJlflYBrQWYZc0p14k0Psy3G9z6sm8-FUNSYiVUViJbc2slTQK0FCON4dA0fsJ_vFoyYaDcXXgMfxKZp4vw_IesRBWXIjx8QM2qVBCGka38fTl6hIsHTqZeuSi7NN1iarQJDOniEj5XsV5l4FP6nMdin7VS8u7TCgZIw_E">
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-mono text-label-mono text-primary-container uppercase">IDX // 03</span>
+<span class="font-mono-code text-mono-code text-secondary">2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ai Humanizer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Perplexity and burstiness recalibration system that restructures synthesized LLM prose into natural human cadences.
+      </p>
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">Transformers</span>
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">PyTorch</span>
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">FastAPI</span>
+</div>
+<div class="flex items-center space-x-space-sm pt-space-xs">
+<button class="bg-primary text-on-primary font-mono-code text-mono-code px-space-sm py-1 rounded font-medium hover:bg-primary-container transition-colors">
+          Live Demo →
+        </button>
+<button class="bg-surface-container-high text-on-surface font-mono-code text-mono-code px-space-sm py-1 rounded hover:bg-surface-bright transition-colors">
+          Source [GH]
+        </button>
+</div>
+</div>
+<!-- Project 4: MaatruCare -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-sm shadow-md">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Minimalist telemetry health display monitor showing maternal vital statistics and risk assessment charts in monochrome and green phosphor accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuysH-MbaiF_AtIkjHKivPkCsS0GCf4o8pG7hrBRPMI8vED0gGm9gS54KC9XkPQNOyXs3Zo3sEzV1gV_QUx4i1ksZLsj0ouk496qN3rBcYgnLibKs6W8YIEGcAb7iILfpcSOycgZ9XFcI-D0D5adYuUDMDKGOgsuL8S6yytJtG-urkS76oJVRQlCak04YAb6haLnF2iaHPDcz04ErXVCN4k4NWyvsGHdYtaG8jTqU">
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-mono text-label-mono text-primary-container uppercase">IDX // 04</span>
+<span class="font-mono-code text-mono-code text-secondary">2023</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">MaatruCare</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Maternal health risk prediction and continuous telemetry assistance for rural clinics with offline-first support.
+      </p>
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">Scikit-Learn</span>
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">React Native</span>
+<span class="bg-surface-container text-on-surface font-label-mono text-label-mono px-space-xs py-0.5 rounded">SQLite</span>
+</div>
+<div class="flex items-center space-x-space-sm pt-space-xs">
+<button class="bg-primary text-on-primary font-mono-code text-mono-code px-space-sm py-1 rounded font-medium hover:bg-primary-container transition-colors">
+          Live Demo →
+        </button>
+<button class="bg-surface-container-high text-on-surface font-mono-code text-mono-code px-space-sm py-1 rounded hover:bg-surface-bright transition-colors">
+          Source [GH]
+        </button>
+</div>
+</div>
+</section>
+<!-- 7. Experience -->
+<section class="flex flex-col space-y-space-md">
+<div class="flex items-center space-x-space-xs font-mono-code text-mono-code text-primary-container">
+<span>&gt;</span>
+<span class="text-on-surface uppercase tracking-wider font-headline-sm text-headline-sm">experience</span>
+</div>
+<div class="flex flex-col space-y-space-sm">
+<!-- Role 1: India Space Lab -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs shadow-sm">
+<div class="flex justify-between items-baseline">
+<span class="font-label-mono text-label-mono text-primary-container">TENURE: 2024</span>
+<span class="font-label-mono text-label-mono text-secondary">AEROSPACE_DIV</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">India Space Lab</h3>
+<p class="font-mono-code text-mono-code text-on-secondary-container">Machine Learning Research Intern</p>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+          Formulated orbital telemetry telemetry forecasting algorithms and applied noise-reduction filters for nano-satellite sensor streams.
+        </p>
+</div>
+<!-- Role 2: SRAI Smart Solutions -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs shadow-sm">
+<div class="flex justify-between items-baseline">
+<span class="font-label-mono text-label-mono text-primary-container">TENURE: 2023 — 2024</span>
+<span class="font-label-mono text-label-mono text-secondary">R&amp;D_UNIT</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">SRAI Smart Solutions</h3>
+<p class="font-mono-code text-mono-code text-on-secondary-container">AI Engineering Trainee</p>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+          Built custom document OCR pipeline and localized fine-tuned LLM microservices reducing invoice parsing lag by 42%.
+        </p>
+</div>
+</div>
+</section>
+<!-- 8. Education -->
+<section class="flex flex-col space-y-space-md">
+<div class="flex items-center space-x-space-xs font-mono-code text-mono-code text-primary-container">
+<span>&gt;</span>
+<span class="text-on-surface uppercase tracking-wider font-headline-sm text-headline-sm">education</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-sm shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-mono text-label-mono text-primary-container">DEGREE_RECORD // 2022 — 2026</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Providence College of Engineering</h3>
+<p class="font-mono-code text-mono-code text-on-secondary-container">
+        Bachelor of Technology — B.Tech, Computer Science &amp; Engineering (Artificial Intelligence)
+      </p>
+<div class="bg-surface-container p-space-sm rounded space-y-1">
+<div class="flex justify-between text-on-surface font-label-mono text-label-mono">
+<span>ACADEMIC FOCUS</span>
+<span class="text-primary-container">ALGORITHMS &amp; NEURAL SYS</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-label-mono text-label-mono">
+<span>AFFILIATION</span>
+<span>APJ ABDUL KALAM TECH UNIV</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Achievements & Certifications -->
+<section class="flex flex-col space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-xs font-mono-code text-mono-code text-primary-container">
+<span>&gt;</span>
+<span class="text-on-surface uppercase tracking-wider font-headline-sm text-headline-sm">credentials</span>
+</div>
+<span class="font-label-mono text-label-mono text-secondary">[SYS:VERIFIED]</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-start justify-between shadow-sm">
+<div class="space-y-1">
+<span class="font-label-mono text-label-mono text-primary-container">01 // AWS CERT</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">AWS Certified Cloud Practitioner</h4>
+<p class="font-label-mono text-label-mono text-on-surface-variant">Cloud Architecture &amp; Scalable AI Infrastructure</p>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary-container">verified</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-start justify-between shadow-sm">
+<div class="space-y-1">
+<span class="font-label-mono text-label-mono text-primary-container">02 // DEEPLEARNING.AI</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Deep Learning Specialization</h4>
+<p class="font-label-mono text-label-mono text-on-surface-variant">CNNs, RNNs, Attention Mechanisms &amp; Hyperparameter Tuning</p>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary-container">verified</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-start justify-between shadow-sm">
+<div class="space-y-1">
+<span class="font-label-mono text-label-mono text-primary-container">03 // HACKATHON</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">National AI Hackathon Winner</h4>
+<p class="font-label-mono text-label-mono text-on-surface-variant">Rank #1 for Automated Triage Diagnostic Neural Pipeline</p>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary-container">emoji_events</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-start justify-between shadow-sm">
+<div class="space-y-1">
+<span class="font-label-mono text-label-mono text-primary-container">04 // ORBITAL RESEARCH</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Space Lab Merit Citation</h4>
+<p class="font-label-mono text-label-mono text-on-surface-variant">Excellence in Micro-Telemetry Signal Conditioning</p>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary-container">award_star</span>
+</div>
+</div>
+</section>
+<!-- 10. Resume CTA Banner -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl space-y-space-sm shadow-md" id="resume">
+<div class="flex items-center space-x-space-xs font-label-mono text-label-mono text-primary-container">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>TRANSMISSION_PAYLOAD</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Request Complete Dossier</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      Complete overview of research papers, code repositories, patents, and engineering work history in a standardized single-page PDF.
+    </p>
+<div class="pt-space-xs">
+<button class="w-full bg-primary text-on-primary font-mono-code text-mono-code py-space-sm rounded font-medium hover:bg-primary-container transition-colors flex items-center justify-center space-x-space-xs">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>DOWNLOAD_CV.PDF [1.2 MB]</span>
+</button>
+</div>
+</section>
+<!-- 11. Contact ("Let's Connect") -->
+<section class="flex flex-col space-y-space-md">
+<div class="flex items-center space-x-space-xs font-mono-code text-mono-code text-primary-container">
+<span>&gt;</span>
+<span class="text-on-surface uppercase tracking-wider font-headline-sm text-headline-sm">let's connect</span>
+</div>
+<!-- Direct Contact Details -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-secondary uppercase">TRANSMISSION_CHANNELS</span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<div class="space-y-space-xs font-mono-code text-mono-code text-on-surface">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">MAIL:</span>
+<a class="hover:text-primary-container transition-colors" href="mailto:adithyan@example.com">adithyan@example.com</a>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">SIGNAL:</span>
+<span>+91 [ENCRYPTED]</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">PGP KEY:</span>
+<span class="text-primary-container">0x9F4C2A11</span>
+</div>
+</div>
+</div>
+<!-- Contact Form with Circular Phosphor Action Button -->
+<form class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-md shadow-md" onsubmit="event.preventDefault();">
+<div class="space-y-space-xs">
+<label class="block font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider">IDENTIFIER // YOUR NAME</label>
+<input class="w-full bg-surface-container text-on-surface font-mono-code text-mono-code p-space-sm rounded outline-none placeholder:text-on-tertiary-container" placeholder="e.g. Dr. Alan Turing" type="text">
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider">RETURN ADDRESS // EMAIL</label>
+<input class="w-full bg-surface-container text-on-surface font-mono-code text-mono-code p-space-sm rounded outline-none placeholder:text-on-tertiary-container" placeholder="e.g. contact@entity.org" type="email">
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider">PAYLOAD // MESSAGE</label>
+<textarea class="w-full bg-surface-container text-on-surface font-mono-code text-mono-code p-space-sm rounded outline-none placeholder:text-on-tertiary-container resize-none" placeholder="Enter message body or project scope..." rows="4"></textarea>
+</div>
+<!-- Hairline divider and circular green action trigger -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center space-x-space-xs text-on-surface-variant font-label-mono text-label-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>READY TO SEND</span>
+</div>
+<button class="w-12 h-12 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md" title="Send Message" type="submit">
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</section>
+<!-- 12. Inverted Editorial Footer -->
+<section class="bg-primary text-on-primary p-space-lg rounded-xl flex flex-col space-y-space-md shadow-xl">
+<div class="flex justify-between items-center">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-primary/70">ARCHIVE ROOT // EST. 2026</span>
+<button class="bg-inverse-surface text-inverse-on-surface font-mono-code text-mono-code px-space-xs py-0.5 rounded text-[11px] uppercase flex items-center space-x-1" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span>TOP</span>
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+</button>
+</div>
+<!-- Giant Wordmark -->
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase tracking-tighter font-bold text-on-primary leading-none">
+      ADITHYAN
+    </h2>
+<div class="space-y-space-xs pt-space-xs">
+<p class="font-mono-code text-mono-code text-on-primary/80">
+        © 2026 Adithyan Sumesh. Designed &amp; Built with ♥
+      </p>
+<p class="font-label-mono text-label-mono uppercase text-on-primary/60">
+        ALL PROTOCOLS VERIFIED // ZERO TRACKERS // RUNTIME OPTIMIZED
+      </p>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('terminalToggleBtn');
+    const screen = document.getElementById('terminalScreen');
+    const led = document.getElementById('terminalLed');
+    const stateText = document.getElementById('terminalStateText');
+    const typingLine = document.getElementById('terminalTypingLine');
+    let isPoweredOn = true;
+
+    if (toggleBtn && screen && led && stateText && typingLine) {
+      toggleBtn.addEventListener('click', () => {
+        isPoweredOn = !isPoweredOn;
+        if (isPoweredOn) {
+          led.classList.remove('bg-on-surface-variant');
+          led.classList.add('bg-primary-container', 'animate-pulse');
+          stateText.textContent = 'SYS: ON';
+          screen.classList.remove('opacity-20');
+          typingLine.textContent = '> loading portfolio index... [DONE]';
+        } else {
+          led.classList.remove('bg-primary-container', 'animate-pulse');
+          led.classList.add('bg-on-surface-variant');
+          stateText.textContent = 'SYS: STANDBY';
+          screen.classList.add('opacity-20');
+          typingLine.textContent = '> terminal idle [STANDBY]';
+        }
+      });
+    }
+  })();
+</script><footer class="mt-space-2xl bg-inverse-surface text-inverse-on-surface p-space-lg"><div class="flex flex-col space-y-space-md"><div class="flex items-center justify-between"><span class="font-label-mono text-label-mono uppercase tracking-widest text-on-tertiary-container">EOF // MANIFEST</span><span class="font-mono-code text-mono-code">EST. 2025</span></div><div class="font-headline-md text-headline-md tracking-tighter uppercase font-bold text-inverse-on-surface">END TRANSMISSION</div><div class="flex items-center justify-between text-on-tertiary-container font-mono-code text-mono-code pt-space-sm"><span class="hover:text-inverse-on-surface transition-colors cursor-pointer">[STATUS: READY]</span><span class="hover:text-inverse-on-surface transition-colors cursor-pointer">[0x00FF]</span></div></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe pointer-events-none" data-active-classes="text-primary-container"><div class="px-margin-mobile pb-space-sm flex justify-center"><div class="pointer-events-auto bg-surface-container-lowest/90 backdrop-blur-xl px-space-xs py-space-xs flex items-center justify-between gap-space-xs max-w-full overflow-x-auto no-scrollbar shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs transition-colors text-primary-container" data-path="home" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="font-label-mono text-label-mono uppercase scale-90">Home</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#"><span class="material-symbols-outlined text-[18px]">account_circle</span><span class="font-label-mono text-label-mono uppercase scale-90">About</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="skills" href="#"><span class="material-symbols-outlined text-[18px]">memory</span><span class="font-label-mono text-label-mono uppercase scale-90">Skills</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-[18px]">folder_code</span><span class="font-label-mono text-label-mono uppercase scale-90">Work</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="experience" href="#"><span class="material-symbols-outlined text-[18px]">history_edu</span><span class="font-label-mono text-label-mono uppercase scale-90">Exp</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="education" href="#"><span class="material-symbols-outlined text-[18px]">school</span><span class="font-label-mono text-label-mono uppercase scale-90">Edu</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-[18px]">alternate_email</span><span class="font-label-mono text-label-mono uppercase scale-90">Mail</span></a></div></div></nav>
+
+</body></html>
