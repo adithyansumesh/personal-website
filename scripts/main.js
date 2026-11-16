@@ -102,155 +102,54 @@ function initScrollProgressBar() {
 }
 
 /**
- * Advanced Bidirectional Scroll-Reveal Animation Engine using GSAP & ScrollTrigger.
- * When scrolling down: elements smoothly emerge into view (opacity, Y translation, scale, blur removal).
- * When scrolling up: elements smoothly reverse and return to their hidden state.
- * Never plays only once; works continuously in both directions.
+ * Advanced Bidirectional Scroll-Reveal Engine
+ * Continuously tracks elements:
+ * - When scrolling down: elements entering the viewport smoothly emerge (opacity, translateY, scale, blur removal).
+ * - When scrolling up: elements exiting below the viewport smoothly reverse and return to their hidden state.
+ * - When scrolling down again: elements emerge again.
+ * - Elements above the viewport remain stable and visible so content never disappears while on screen.
  */
+let globalScrollObserver = null;
+
 function initBidirectionalScrollReveals() {
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-        console.warn('GSAP or ScrollTrigger not loaded; falling back to direct display.');
+    const targets = document.querySelectorAll('.reveal-item, .reveal-card');
+    if (!targets.length) return;
+
+    if (typeof IntersectionObserver === 'undefined') {
+        targets.forEach((el) => el.classList.add('is-revealed'));
         return;
     }
 
-    gsap.registerPlugin(ScrollTrigger);
+    if (globalScrollObserver) {
+        globalScrollObserver.disconnect();
+    }
 
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) {
-        gsap.set('.reveal-item, .reveal-group > *', {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            filter: 'none'
+    globalScrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const target = entry.target;
+            const rect = entry.boundingClientRect;
+            const vh = window.innerHeight || document.documentElement.clientHeight;
+
+            if (entry.isIntersecting) {
+                target.classList.add('is-revealed');
+            } else {
+                // If the element has moved below the viewport (user scrolled up above it):
+                // Reset it so it will emerge smoothly when user scrolls back down.
+                // Elements that moved above the top of the viewport (rect.top < 0) stay revealed!
+                if (rect.top >= vh - 10) {
+                    target.classList.remove('is-revealed');
+                }
+            }
         });
-        return;
-    }
-
-    const isMobile = window.innerWidth < 768;
-    const yOffset = isMobile ? 28 : 50;
-    const blurAmount = isMobile ? 3 : 6;
-    const scaleFactor = 0.97;
-    const animDuration = isMobile ? 0.6 : 0.75;
-
-    // Standalone Reveal Items (Section headers, hero lower block, banner, standalone cards)
-    const items = gsap.utils.toArray('.reveal-item');
-    items.forEach((item) => {
-        const existingTriggers = ScrollTrigger.getAll().filter((st) => st.trigger === item);
-        existingTriggers.forEach((st) => st.kill());
-
-        gsap.fromTo(
-            item,
-            {
-                opacity: 0,
-                y: yOffset,
-                scale: scaleFactor,
-                filter: `blur(${blurAmount}px)`
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                filter: 'blur(0px)',
-                duration: animDuration,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: item,
-                    start: 'top 90%',
-                    end: 'bottom top',
-                    toggleActions: 'play reverse play reverse',
-                    fastScrollEnd: true
-                }
-            }
-        );
+    }, {
+        root: null,
+        threshold: 0,
+        rootMargin: '0px 0px -10px 0px'
     });
 
-    // Staggered Groups (Grids of cards, role chronology, award matrices)
-    const groups = gsap.utils.toArray('.reveal-group');
-    groups.forEach((group) => {
-        const children = Array.from(group.children);
-        if (!children.length) return;
-
-        const existingTriggers = ScrollTrigger.getAll().filter((st) => st.trigger === group);
-        existingTriggers.forEach((st) => st.kill());
-
-        gsap.fromTo(
-            children,
-            {
-                opacity: 0,
-                y: yOffset,
-                scale: scaleFactor,
-                filter: `blur(${blurAmount}px)`
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                filter: 'blur(0px)',
-                duration: animDuration,
-                stagger: isMobile ? 0.08 : 0.12,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: group,
-                    start: 'top 88%',
-                    end: 'bottom top',
-                    toggleActions: 'play reverse play reverse',
-                    fastScrollEnd: true
-                }
-            }
-        );
+    targets.forEach((el) => {
+        globalScrollObserver.observe(el);
     });
-
-    ScrollTrigger.refresh();
-}
-
-/**
- * Re-initializes bidirectional scroll reveals for dynamically loaded GitHub project cards.
- */
-function initProjectsBidirectionalScroll() {
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-
-    const group = document.getElementById('github-projects');
-    if (!group) return;
-
-    const children = Array.from(group.children);
-    if (!children.length) return;
-
-    const isMobile = window.innerWidth < 768;
-    const yOffset = isMobile ? 28 : 50;
-    const blurAmount = isMobile ? 3 : 6;
-    const scaleFactor = 0.97;
-    const animDuration = isMobile ? 0.6 : 0.75;
-
-    const existingTriggers = ScrollTrigger.getAll().filter((st) => st.trigger === group);
-    existingTriggers.forEach((st) => st.kill());
-
-    gsap.fromTo(
-        children,
-        {
-            opacity: 0,
-            y: yOffset,
-            scale: scaleFactor,
-            filter: `blur(${blurAmount}px)`
-        },
-        {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            filter: 'blur(0px)',
-            duration: animDuration,
-            stagger: isMobile ? 0.08 : 0.12,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: group,
-                start: 'top 88%',
-                end: 'bottom top',
-                toggleActions: 'play reverse play reverse',
-                fastScrollEnd: true
-            }
-        }
-    );
-
-    ScrollTrigger.refresh();
 }
 
 /**
@@ -427,7 +326,8 @@ function initContactForm() {
  */
 function createProjectCard({ indexNumber, title, description, techTags, demoUrl, sourceUrl, imageUrl }) {
     const card = document.createElement('article');
-    card.className = 'tilt-card reveal-card bg-surface-container-low border border-[#242424] flex flex-col group hover:border-primary-container transition-all duration-300';
+    const staggerIndex = ((indexNumber - 1) % 5) + 1;
+    card.className = `tilt-card reveal-card bg-surface-container-low border border-[#242424] flex flex-col group hover:border-primary-container transition-all duration-300 stagger-${staggerIndex}`;
 
     // Visual frame matching Stitch project preview
     const mediaFrame = document.createElement('div');
@@ -581,7 +481,9 @@ async function loadGitHubProjects() {
 
         init3DCardTilt();
         initMagneticButtons();
-        initProjectsBidirectionalScroll();
+        if (globalScrollObserver) {
+            container.querySelectorAll('.reveal-card').forEach((c) => globalScrollObserver.observe(c));
+        }
     } catch (error) {
         console.error('Error fetching GitHub repos:', error);
         container.innerHTML = '';
@@ -593,7 +495,9 @@ async function loadGitHubProjects() {
 
         init3DCardTilt();
         initMagneticButtons();
-        initProjectsBidirectionalScroll();
+        if (globalScrollObserver) {
+            container.querySelectorAll('.reveal-card').forEach((c) => globalScrollObserver.observe(c));
+        }
 
         const errMsg = document.createElement('p');
         errMsg.className = 'col-span-full text-center font-mono-code text-mono-code text-error';
