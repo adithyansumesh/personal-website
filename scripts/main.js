@@ -136,7 +136,7 @@ function initBidirectionalScrollReveals() {
                 // If the element has moved below the viewport (user scrolled up above it):
                 // Reset it so it will emerge smoothly when user scrolls back down.
                 // Elements that moved above the top of the viewport (rect.top < 0) stay revealed!
-                if (rect.top >= vh - 10) {
+                if (rect.top >= vh - 5) {
                     target.classList.remove('is-revealed');
                 }
             }
@@ -144,7 +144,7 @@ function initBidirectionalScrollReveals() {
     }, {
         root: null,
         threshold: 0,
-        rootMargin: '0px 0px -10px 0px'
+        rootMargin: '0px'
     });
 
     targets.forEach((el) => {
